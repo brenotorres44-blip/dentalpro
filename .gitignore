@@ -16,3 +16,4 @@ coverage/
 
 # Configuração local do Claude Code — é da máquina, não do projeto
 .claude/settings.local.json
+tsconfig.tsbuildinfo
