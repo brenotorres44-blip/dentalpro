@@ -1,0 +1,18 @@
+node_modules/
+dist/
+dist-ssr/
+*.local
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+npm-debug.log*
+.vite/
+coverage/
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Configuração local do Claude Code — é da máquina, não do projeto
+.claude/settings.local.json
