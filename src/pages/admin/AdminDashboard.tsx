@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { HolographicPanel } from '@/components/ui/HolographicPanel';
 import { EmptyState } from '@/components/ui/EmptyState';
+import { QuickAccess } from '@/components/dashboard/QuickAccess';
 import { DashboardCard } from '@/components/dashboard/DashboardCard';
 import { AnimatedNumber } from '@/components/ui/AnimatedNumber';
 import { ProgressBar } from '@/components/ui/ProgressBar';
@@ -22,6 +23,7 @@ import { StatusIndicator } from '@/components/ui/StatusIndicator';
 import { BootStage, useBoot } from '@/hooks/useBoot';
 import { usePlatform } from '@/services/platformStore';
 import { monthLabel, type MrrPoint } from '@/data/saas';
+import { ADMIN_NAV } from '@/config/navigation';
 import { formatBRL, formatBRLCompact, formatInt, formatPercent } from '@/utils/format';
 import { cn } from '@/utils/cn';
 
@@ -138,6 +140,9 @@ export function AdminDashboard() {
 
   return (
     <div className="flex flex-col gap-4">
+      {/* ---------- atalhos ---------- */}
+      <QuickAccess items={ADMIN_NAV} exclude="/admin/dashboard" />
+
       {/* ---------- indicadores da plataforma ---------- */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
         <DashboardCard

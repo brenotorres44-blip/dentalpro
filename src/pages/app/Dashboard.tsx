@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 
 import { HolographicPanel } from '@/components/ui/HolographicPanel';
+import { QuickAccess } from '@/components/dashboard/QuickAccess';
 import { DashboardCard } from '@/components/dashboard/DashboardCard';
 import { Sparkline } from '@/components/dashboard/Sparkline';
 import { RadialGauge } from '@/components/dashboard/RadialGauge';
@@ -31,6 +32,7 @@ import { Skeleton } from '@/components/ui/Skeleton';
 
 import { getDashboardSnapshot } from '@/services/dashboardService';
 import { useOperations } from '@/services/store';
+import { APP_NAV } from '@/config/navigation';
 import { formatBRL, formatInt, formatLongDate, isSameDay } from '@/utils/format';
 import { BootStage, useBoot } from '@/hooks/useBoot';
 
@@ -145,6 +147,9 @@ export function Dashboard() {
           </TechButton>
         </div>
       </motion.div>
+
+      {/* ---------- atalhos ------------------------------------------------ */}
+      <QuickAccess items={APP_NAV} exclude="/app/dashboard" />
 
       {/* ---------- grade principal --------------------------------------- */}
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-12">
