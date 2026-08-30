@@ -59,7 +59,7 @@ export function AppointmentList({
       <div className="flex h-full min-h-[220px] flex-col items-center justify-center gap-3 text-center">
         <CalendarX2 size={26} className="text-ink-faint" />
         <div>
-          <p className="font-display text-[12px] uppercase tracking-[0.2em] text-ink-dim">
+          <p className="font-display text-[12px] text-ink-dim">
             Sem atendimentos
           </p>
           <p className="mt-1 text-[11px] text-ink-faint">Nenhum horário registrado nesta data.</p>
@@ -117,7 +117,7 @@ export function AppointmentList({
               <span
                 className={cn(
                   'inline-flex items-center gap-1.5 rounded-[8px] border px-1.5 py-0.5',
-                  'font-mono text-[9px] tracking-[0.14em]',
+                  'font-mono text-[9px]',
                   s.chip,
                 )}
               >

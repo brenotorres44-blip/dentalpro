@@ -240,7 +240,7 @@ export function AdminDashboard() {
             {planDistribution.map((d, i) => (
               <div key={d.plan.id} className="flex flex-col gap-1.5">
                 <div className="flex items-baseline justify-between gap-2">
-                  <span className="font-display text-[11px] font-semibold tracking-[0.16em] text-ink">
+                  <span className="font-display text-[11px] font-semibold text-ink">
                     {d.plan.name}
                   </span>
                   <span className="flex items-baseline gap-2">
@@ -369,7 +369,7 @@ export function AdminDashboard() {
       >
         <Link
           to="/admin/companies"
-          className="group flex items-center gap-2 rounded-[8px] border border-hud/30 bg-hud/[0.06] px-5 py-2.5 font-mono text-[10px] uppercase tracking-[0.18em] text-hud transition-all duration-200 hover:border-hud/60 hover:bg-hud/12"
+          className="group flex items-center gap-2 rounded-[8px] border border-hud/30 bg-hud/[0.06] px-5 py-2.5 font-mono text-[10px] text-hud transition-all duration-200 hover:border-hud/60 hover:bg-hud/12"
         >
           <Building2 size={13} />
           Gerenciar empresas

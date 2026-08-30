@@ -383,7 +383,7 @@ export const DEFAULT_SETTINGS: ShopSettings = {
     { ...WEEKDAY_HOURS },
     { ...WEEKDAY_HOURS },
     { closed: false, open: '08:00', close: '17:00' },
-    { closed: true, open: '08:00', close: '12:00' },
+    { closed: false, open: '08:00', close: '12:00' },
   ],
   holidays: [],
   booking: {

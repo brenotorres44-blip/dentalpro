@@ -171,7 +171,7 @@ export function Onboarding() {
                       >
                         {task.label}
                         {task.required && !isDone && (
-                          <span className="rounded-[8px] border border-warn/30 bg-warn/10 px-1.5 py-px font-mono text-[8px] uppercase tracking-[0.12em] text-warn">
+                          <span className="rounded-[8px] border border-warn/30 bg-warn/10 px-1.5 py-px font-mono text-[8px] text-warn">
                             obrigatório
                           </span>
                         )}
@@ -201,7 +201,7 @@ export function Onboarding() {
               disabled={!complete}
               className={cn(
                 'group flex items-center justify-center gap-2 rounded-[8px] border py-3',
-                'font-mono text-[11px] uppercase tracking-[0.2em] transition-all duration-200',
+                'font-mono text-[11px] transition-all duration-200',
                 complete
                   ? 'border-hud/50 bg-hud/12 text-hud hover:bg-hud/20'
                   : 'cursor-not-allowed border-stroke/50 text-ink-faint/60',

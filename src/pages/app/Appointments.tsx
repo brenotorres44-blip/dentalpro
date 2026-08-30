@@ -204,7 +204,7 @@ export function Appointments() {
                 key={v}
                 onClick={() => setView(v)}
                 className={cn(
-                  'rounded-[8px] px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-colors duration-200',
+                  'rounded-[8px] px-3 py-1.5 font-mono text-[10px] transition-colors duration-200',
                   view === v ? 'bg-hud/15 text-hud' : 'text-ink-faint hover:text-ink-dim',
                 )}
               >
@@ -373,7 +373,7 @@ export function Appointments() {
                           setCreating({ professionalId: staff[0]?.id ?? '', time: '09:00' });
                           setPrefill(entry);
                         }}
-                        className="rounded-[8px] border border-hud/35 bg-hud/10 py-1.5 font-mono text-[9px] uppercase tracking-[0.14em] text-hud transition-colors hover:bg-hud/20"
+                        className="rounded-[8px] border border-hud/35 bg-hud/10 py-1.5 font-mono text-[9px] text-hud transition-colors hover:bg-hud/20"
                       >
                         Oferecer vaga
                       </button>

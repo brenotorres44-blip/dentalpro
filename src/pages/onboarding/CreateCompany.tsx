@@ -83,7 +83,7 @@ export function CreateCompany() {
             <Store size={20} strokeWidth={1.5} />
           </span>
           <div className="min-w-0">
-            <h1 className="font-display text-[17px] font-bold tracking-[0.14em] text-ink">
+            <h1 className="font-display text-[17px] font-bold text-ink">
               CRIE SUA CLÍNICA
             </h1>
             <p className="mt-1 truncate text-[12px] text-ink-faint">{session?.user.email}</p>
@@ -178,7 +178,7 @@ export function CreateCompany() {
                     />
                     <span
                       className={cn(
-                        'min-w-0 truncate font-mono text-[9.5px] uppercase tracking-[0.1em]',
+                        'min-w-0 truncate font-mono text-[9.5px]',
                         selected ? 'text-hud' : 'text-ink-faint',
                       )}
                     >

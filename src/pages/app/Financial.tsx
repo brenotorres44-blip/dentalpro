@@ -361,7 +361,7 @@ export function Financial() {
                     ) : (
                       <button
                         onClick={() => setClosing(shift)}
-                        className="shrink-0 rounded-[8px] border border-hud/35 bg-hud/10 px-2 py-1 font-mono text-[9px] uppercase tracking-[0.14em] text-hud transition-colors hover:bg-hud/20"
+                        className="shrink-0 rounded-[8px] border border-hud/35 bg-hud/10 px-2 py-1 font-mono text-[9px] text-hud transition-colors hover:bg-hud/20"
                       >
                         Fechar
                       </button>
@@ -431,7 +431,7 @@ function EntryDrawer({ open, onClose }: { open: boolean; onClose: () => void }) 
               type="button"
               onClick={() => set('direction', value)}
               className={cn(
-                'rounded-[8px] border py-2.5 font-mono text-[10px] uppercase tracking-[0.16em] transition-all duration-200',
+                'rounded-[8px] border py-2.5 font-mono text-[10px] transition-all duration-200',
                 draft.direction === value
                   ? value === 'entrada'
                     ? 'border-success/50 bg-success/12 text-success'

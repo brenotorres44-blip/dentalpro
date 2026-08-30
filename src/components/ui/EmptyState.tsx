@@ -24,7 +24,7 @@ export function EmptyState({
         <Icon size={20} strokeWidth={1.4} />
       </span>
       <div>
-        <p className="font-display text-[12px] uppercase tracking-[0.2em] text-ink-dim">{title}</p>
+        <p className="font-display text-[12px] text-ink-dim">{title}</p>
         <p className="mx-auto mt-1.5 max-w-sm text-[11.5px] leading-relaxed text-ink-faint">
           {description}
         </p>

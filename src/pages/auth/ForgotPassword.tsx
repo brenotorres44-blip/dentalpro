@@ -44,7 +44,7 @@ export function ForgotPassword() {
         className="w-full max-w-[380px]"
       >
         <div className="mb-6 text-center">
-          <h1 className="font-display text-[17px] font-bold tracking-[0.24em] text-ink">
+          <h1 className="font-display text-[17px] font-bold text-ink">
             RECUPERAR ACESSO
           </h1>
           <p className="tech-label mt-1.5">ENVIAREMOS UM LINK DE REDEFINIÇÃO</p>
@@ -63,7 +63,7 @@ export function ForgotPassword() {
                 <MailCheck size={24} />
               </span>
               <div>
-                <p className="font-mono text-[12px] uppercase tracking-[0.2em] text-success">
+                <p className="font-mono text-[12px] text-success">
                   Link enviado
                 </p>
                 {/* Não confirmamos se o e-mail existe: revelar isso entrega uma
@@ -94,7 +94,7 @@ export function ForgotPassword() {
               <button
                 type="submit"
                 disabled={busy}
-                className="flex items-center justify-center gap-2 rounded-[8px] border border-hud/50 bg-hud/12 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-hud transition-all duration-200 hover:bg-hud/20 hover: disabled:opacity-45"
+                className="flex items-center justify-center gap-2 rounded-[8px] border border-hud/50 bg-hud/12 py-3 font-mono text-[11px] text-hud transition-all duration-200 hover:bg-hud/20 hover: disabled:opacity-45"
               >
                 <Send size={13} />
                 {busy ? 'Enviando…' : 'Enviar link'}

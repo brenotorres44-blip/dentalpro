@@ -126,7 +126,7 @@ export function Badge({
     <span
       className={cn(
         'inline-flex items-center whitespace-nowrap rounded-[8px] border px-1.5 py-0.5',
-        'font-mono text-[9px] uppercase tracking-[0.12em]',
+        'font-mono text-[9px]',
         TONE_CLASS[tone],
       )}
     >

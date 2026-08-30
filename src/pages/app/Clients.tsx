@@ -491,7 +491,7 @@ function ClientForm({
               type="button"
               onClick={() => setTab(value)}
               className={cn(
-                'rounded-[8px] border px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-200',
+                'rounded-[8px] border px-3 py-1.5 font-mono text-[10px] transition-all duration-200',
                 tab === value
                   ? 'border-hud/50 bg-hud/12 text-hud'
                   : 'border-stroke/60 text-ink-faint hover:border-hud/30',
@@ -627,7 +627,7 @@ function ClientForm({
                       set('tags', selected ? draft.tags.filter((t) => t !== tag) : [...draft.tags, tag])
                     }
                     className={cn(
-                      'rounded-[8px] border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.1em] transition-all duration-200',
+                      'rounded-[8px] border px-2 py-1 font-mono text-[10px] transition-all duration-200',
                       selected
                         ? 'border-hud/50 bg-hud/12 text-hud'
                         : 'border-stroke/60 text-ink-faint hover:border-hud/30',

@@ -126,7 +126,7 @@ function CompanyProfile({ company }: { company: Company }) {
 
   if (!detail) {
     return (
-      <p className="mt-5 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-ink-faint anim-breathe">
+      <p className="mt-5 text-center font-mono text-[10px] text-ink-faint anim-breathe">
         carregando o perfil
       </p>
     );
@@ -204,7 +204,7 @@ function CompanyProfile({ company }: { company: Company }) {
               </div>
             ))}
             {sub.cancelAtPeriodEnd && (
-              <p className="col-span-2 rounded-[8px] border border-warn/30 bg-warn/[0.07] px-2 py-1.5 font-mono text-[9.5px] uppercase tracking-[0.12em] text-warn">
+              <p className="col-span-2 rounded-[8px] border border-warn/30 bg-warn/[0.07] px-2 py-1.5 font-mono text-[9.5px] text-warn">
                 cancelamento pedido — encerra no fim do período
               </p>
             )}
@@ -231,7 +231,7 @@ function CompanyProfile({ company }: { company: Company }) {
                 <span className="block font-mono text-[11px] text-ink tnum">
                   {formatShortDate(new Date(f.issuedOn))}
                 </span>
-                <span className="block font-mono text-[9.5px] uppercase tracking-[0.1em] text-ink-faint">
+                <span className="block font-mono text-[9.5px] text-ink-faint">
                   {f.paidAt ? `paga em ${formatShortDate(new Date(f.paidAt))}` : 'sem pagamento'}
                 </span>
               </span>
@@ -259,7 +259,7 @@ function CompanyProfile({ company }: { company: Company }) {
               <span className="block truncate text-[10px] text-ink-faint">{m.email}</span>
             </span>
             <span className="flex shrink-0 flex-col items-end gap-0.5">
-              <span className="font-mono text-[9.5px] uppercase tracking-[0.12em] text-hud">
+              <span className="font-mono text-[9.5px] text-hud">
                 {ROLE_LABEL[m.role] ?? m.role}
               </span>
               {/* "nunca acessou" e não a data do convite: um acesso parado não
@@ -280,7 +280,7 @@ function CompanyProfile({ company }: { company: Company }) {
                 className="flex items-center justify-between gap-3 rounded-[8px] border border-warn/25 bg-warn/[0.05] px-2.5 py-2"
               >
                 <span className="min-w-0 truncate text-[11px] text-ink-dim">{c.email}</span>
-                <span className="shrink-0 font-mono text-[9.5px] uppercase tracking-[0.12em] text-warn">
+                <span className="shrink-0 font-mono text-[9.5px] text-warn">
                   {ROLE_LABEL[c.role] ?? c.role} · vence {formatShortDate(new Date(c.expiresAt))}
                 </span>
               </div>
@@ -517,7 +517,7 @@ export function Companies() {
                 key={f.value}
                 onClick={() => setStatus(f.value)}
                 className={cn(
-                  'rounded-[8px] border px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-200',
+                  'rounded-[8px] border px-2.5 py-1.5 font-mono text-[10px] transition-all duration-200',
                   status === f.value
                     ? 'border-hud/50 bg-hud/12 text-hud'
                     : 'border-stroke/60 text-ink-faint hover:border-hud/30 hover:text-ink-dim',
@@ -566,7 +566,7 @@ export function Companies() {
             >
               <header className="flex items-start justify-between gap-3 border-b border-hud/12 p-5">
                 <div className="min-w-0">
-                  <h2 className="truncate font-display text-[14px] font-semibold tracking-[0.14em] text-ink">
+                  <h2 className="truncate font-display text-[14px] font-semibold text-ink">
                     {selected.name}
                   </h2>
                   <p className="mt-1 truncate text-[11.5px] text-ink-faint">
@@ -662,7 +662,7 @@ export function Companies() {
                 {can('platform.impersonate') && (
                   <button
                     onClick={() => access(selected)}
-                    className="group flex items-center justify-center gap-2 rounded-[8px] border border-hud/50 bg-hud/12 py-3 font-mono text-[10px] uppercase tracking-[0.18em] text-hud transition-all duration-200 hover:bg-hud/20"
+                    className="group flex items-center justify-center gap-2 rounded-[8px] border border-hud/50 bg-hud/12 py-3 font-mono text-[10px] text-hud transition-all duration-200 hover:bg-hud/20"
                   >
                     <LogIn size={13} />
                     Acessar ambiente

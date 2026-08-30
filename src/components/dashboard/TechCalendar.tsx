@@ -59,7 +59,7 @@ export function TechCalendar({
             transition={{ duration: 0.18 }}
             className="text-center"
           >
-            <div className="font-display text-[12px] font-semibold uppercase tracking-[0.22em] text-ink">
+            <div className="font-display text-[12px] font-semibold text-ink">
               {MONTHS[month]}
             </div>
             <div className="tech-label tnum">{year}</div>

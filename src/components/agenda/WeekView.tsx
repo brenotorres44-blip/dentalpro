@@ -80,7 +80,7 @@ export function WeekView({ date, onPick }: { date: Date; onPick: (date: Date) =>
             )}
           >
             <div className="flex items-baseline justify-between gap-1">
-              <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-faint">
+              <span className="font-mono text-[10px] text-ink-faint">
                 {WEEKDAYS_SHORT[entry.day.getDay()]}
               </span>
               <span
@@ -94,7 +94,7 @@ export function WeekView({ date, onPick }: { date: Date; onPick: (date: Date) =>
             </div>
 
             {entry.closed ? (
-              <span className="font-mono text-[9.5px] uppercase tracking-[0.12em] text-ink-faint">
+              <span className="font-mono text-[9.5px] text-ink-faint">
                 Fechado
               </span>
             ) : (

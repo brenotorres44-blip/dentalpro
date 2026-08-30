@@ -96,7 +96,7 @@ export function ResetPassword() {
         className="w-full max-w-[380px]"
       >
         <div className="mb-6 text-center">
-          <h1 className="font-display text-[17px] font-bold tracking-[0.24em] text-ink">
+          <h1 className="font-display text-[17px] font-bold text-ink">
             NOVA SENHA
           </h1>
           <p className="tech-label mt-1.5">ESCOLHA A SENHA DE ACESSO</p>
@@ -114,7 +114,7 @@ export function ResetPassword() {
               <span className="grid h-14 w-14 place-items-center rounded-full border-2 border-success/50 text-success">
                 <ShieldCheck size={24} />
               </span>
-              <p className="font-mono text-[12px] uppercase tracking-[0.2em] text-success">
+              <p className="font-mono text-[12px] text-success">
                 Senha alterada
               </p>
               <p className="text-[12.5px] leading-relaxed text-ink-dim">
@@ -130,7 +130,7 @@ export function ResetPassword() {
               </Callout>
               <Link
                 to="/forgot-password"
-                className="flex items-center justify-center gap-2 rounded-[8px] border border-hud/50 bg-hud/12 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-hud transition-all duration-200 hover:bg-hud/20"
+                className="flex items-center justify-center gap-2 rounded-[8px] border border-hud/50 bg-hud/12 py-3 font-mono text-[11px] text-hud transition-all duration-200 hover:bg-hud/20"
               >
                 Pedir novo link
               </Link>
@@ -164,7 +164,7 @@ export function ResetPassword() {
               <button
                 type="submit"
                 disabled={busy || linkOk === null}
-                className="flex items-center justify-center gap-2 rounded-[8px] border border-hud/50 bg-hud/12 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-hud transition-all duration-200 hover:bg-hud/20 hover: disabled:opacity-45"
+                className="flex items-center justify-center gap-2 rounded-[8px] border border-hud/50 bg-hud/12 py-3 font-mono text-[11px] text-hud transition-all duration-200 hover:bg-hud/20 hover: disabled:opacity-45"
               >
                 <KeyRound size={13} />
                 {busy ? 'Gravando…' : 'Gravar senha'}

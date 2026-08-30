@@ -43,7 +43,7 @@ export function StatusIndicator({
       {label && (
         <span
           className={cn(
-            'font-mono uppercase tracking-[0.16em]',
+            'font-mono',
             compact ? 'text-[9px]' : 'text-[10px]',
             t.text,
           )}

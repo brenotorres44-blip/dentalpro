@@ -95,7 +95,7 @@ export function ThemeSwatch({
       >
         <span className="min-w-0">
           <span
-            className="block truncate font-display text-[10.5px] font-semibold tracking-[0.14em]"
+            className="block truncate font-display text-[10.5px] font-semibold"
             style={{ color: t.ink }}
           >
             {theme.name}

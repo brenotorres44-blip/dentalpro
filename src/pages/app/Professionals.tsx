@@ -480,7 +480,7 @@ function ProfessionalForm({
             <div className="flex items-center justify-between gap-2">
               <span
                 className={cn(
-                  'font-mono text-[11px] uppercase tracking-[0.14em]',
+                  'font-mono text-[11px]',
                   shift ? 'text-ink' : 'text-ink-faint',
                 )}
               >
@@ -490,7 +490,7 @@ function ProfessionalForm({
                 type="button"
                 onClick={() => setDay(index, shift ? null : { ...DEFAULT_SHIFT })}
                 className={cn(
-                  'rounded-[8px] border px-2 py-1 font-mono text-[9px] uppercase tracking-[0.14em] transition-colors duration-200',
+                  'rounded-[8px] border px-2 py-1 font-mono text-[9px] transition-colors duration-200',
                   shift
                     ? 'border-hud/40 bg-hud/10 text-hud'
                     : 'border-stroke/60 text-ink-faint hover:border-hud/30',
@@ -570,7 +570,7 @@ function ProfessionalForm({
                   )
                 }
                 className={cn(
-                  'rounded-[8px] border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.1em] transition-all duration-200',
+                  'rounded-[8px] border px-2 py-1 font-mono text-[10px] transition-all duration-200',
                   selected
                     ? 'border-hud/50 bg-hud/12 text-hud'
                     : 'border-stroke/60 text-ink-faint hover:border-hud/30',

@@ -72,7 +72,7 @@ export function FilterChips<T extends string>({
           onClick={() => onChange(option.value)}
           aria-pressed={value === option.value}
           className={cn(
-            'rounded-[8px] border px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-200',
+            'rounded-[8px] border px-2.5 py-1.5 font-mono text-[10px] transition-all duration-200',
             value === option.value
               ? 'border-hud/50 bg-hud/12 text-hud'
               : 'border-stroke/60 text-ink-faint hover:border-hud/30 hover:text-ink-dim',

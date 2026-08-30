@@ -132,7 +132,7 @@ export function Dashboard() {
           {lowStock > 0 && (
             <span className="flex items-center gap-1.5 rounded-[8px] border border-critical/35 bg-critical/10 px-2.5 py-1.5">
               <StatusIndicator tone="critical" pulse />
-              <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-critical">
+              <span className="font-mono text-[10px] text-critical">
                 {lowStock} {lowStock === 1 ? 'item crítico' : 'itens críticos'}
               </span>
             </span>

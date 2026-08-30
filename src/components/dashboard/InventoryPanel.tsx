@@ -65,7 +65,7 @@ export function InventoryPanel({ items }: { items: Product[] }) {
 
             {/* O alerta é texto, não só cor — quem não distingue vermelho ainda lê. */}
             {low && (
-              <div className="mt-1 font-mono text-[9px] uppercase tracking-[0.14em] text-critical/80">
+              <div className="mt-1 font-mono text-[9px] text-critical/80">
                 Estoque abaixo do mínimo ({p.min} {p.unit})
               </div>
             )}

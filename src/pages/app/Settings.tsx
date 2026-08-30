@@ -296,7 +296,7 @@ export function Settings() {
                   type="button"
                   onClick={() => setHours(index, { closed: !day.closed })}
                   className={cn(
-                    'w-16 shrink-0 rounded-[8px] border px-1.5 py-1 font-mono text-[10px] uppercase tracking-[0.1em] transition-colors duration-200',
+                    'w-16 shrink-0 rounded-[8px] border px-1.5 py-1 font-mono text-[10px] transition-colors duration-200',
                     day.closed
                       ? 'border-stroke/60 text-ink-faint hover:border-hud/30'
                       : 'border-hud/40 bg-hud/10 text-hud',
@@ -311,7 +311,7 @@ export function Settings() {
                 </span>
 
                 {day.closed ? (
-                  <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-faint">
+                  <span className="font-mono text-[10px] text-ink-faint">
                     Fechado
                   </span>
                 ) : (

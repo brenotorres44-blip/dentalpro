@@ -99,7 +99,7 @@ export function AgendaGrid({
                 <div className="truncate text-[11.5px] font-medium text-ink">
                   {p.name.split(' ')[0]}
                 </div>
-                <div className="truncate font-mono text-[9.5px] uppercase tracking-[0.1em] text-ink-faint tnum">
+                <div className="truncate font-mono text-[9.5px] text-ink-faint tnum">
                   {shift ? `${shift.start}–${shift.end}` : 'folga'}
                 </div>
               </div>
@@ -192,7 +192,7 @@ export function AgendaGrid({
                     title={block.reason}
                   >
                     <Lock size={11} className="shrink-0 text-ink-faint" />
-                    <span className="truncate font-mono text-[9.5px] uppercase tracking-[0.1em] text-ink-faint">
+                    <span className="truncate font-mono text-[9.5px] text-ink-faint">
                       {block.reason || 'bloqueado'}
                     </span>
                   </div>

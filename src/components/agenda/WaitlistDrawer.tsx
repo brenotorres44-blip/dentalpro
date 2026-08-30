@@ -76,7 +76,7 @@ export function WaitlistDrawer({ open, onClose }: { open: boolean; onClose: () =
                       }))
                     }
                     className={cn(
-                      'rounded-[8px] border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.1em] transition-all duration-200',
+                      'rounded-[8px] border px-2 py-1 font-mono text-[10px] transition-all duration-200',
                       selected
                         ? 'border-hud/50 bg-hud/12 text-hud'
                         : 'border-stroke/60 text-ink-faint hover:border-hud/30',

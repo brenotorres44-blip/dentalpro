@@ -89,7 +89,7 @@ function PlanCard({ plan, inUse, featured }: { plan: Plan; inUse: number; featur
     >
       <header className="flex items-start justify-between gap-2">
         <div>
-          <h3 className="font-display text-[13px] font-bold tracking-[0.18em] text-ink">
+          <h3 className="font-display text-[13px] font-bold text-ink">
             {plan.name}
           </h3>
           <p className="mt-1 text-[11px] leading-snug text-ink-faint">{plan.tagline}</p>
@@ -131,7 +131,7 @@ function PlanCard({ plan, inUse, featured }: { plan: Plan; inUse: number; featur
       */}
       <p
         className={cn(
-          'rounded-[8px] border px-2 py-1.5 font-mono text-[9.5px] uppercase tracking-[0.12em]',
+          'rounded-[8px] border px-2 py-1.5 font-mono text-[9.5px]',
           plan.chargeable
             ? 'border-success/30 bg-success/[0.07] text-success'
             : 'border-warn/30 bg-warn/[0.07] text-warn',
@@ -196,7 +196,7 @@ function PlanCard({ plan, inUse, featured }: { plan: Plan; inUse: number; featur
       </div>
 
       <div className="mt-auto flex items-center justify-between gap-3 border-t border-hud/10 pt-3">
-        <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-ink-faint">
+        <span className="font-mono text-[10px] text-ink-faint">
           {mudou ? 'alterações não salvas' : 'tudo salvo'}
         </span>
         <TechButton

@@ -175,7 +175,7 @@ export function Register() {
             <MailCheck size={34} />
           </span>
           <div>
-            <h1 className="font-display text-[19px] font-bold tracking-[0.22em] text-warn">
+            <h1 className="font-display text-[19px] font-bold text-warn">
               CONFIRME SEU E-MAIL
             </h1>
             <p className="mt-3 text-[13px] leading-relaxed text-ink-dim">
@@ -211,10 +211,10 @@ export function Register() {
   return (
     <div className="mx-auto flex min-h-dvh max-w-2xl flex-col justify-center px-4 py-10">
       <div className="mb-7 text-center">
-        <h1 className="font-display text-[21px] font-bold tracking-[0.24em] text-ink">
-          CRIAR SUA CONTA
-        </h1>
-        <p className="tech-label mt-1.5">ETAPA {step + 1} DE {STEPS.length}</p>
+        <h1 className="font-display text-[22px] font-bold text-ink">Criar sua conta</h1>
+        <p className="mt-1.5 text-[12.5px] text-ink-faint">
+          Etapa {step + 1} de {STEPS.length}
+        </p>
       </div>
 
       {/* trilha de etapas */}
@@ -325,7 +325,7 @@ export function Register() {
                           ))}
                         </span>
                         <span className="min-w-0">
-                          <span className="block font-display text-[11px] font-semibold tracking-[0.14em] text-ink">
+                          <span className="block font-display text-[11px] font-semibold text-ink">
                             {t.name}
                           </span>
                           <span className="block truncate text-[10px] text-ink-faint">{t.tagline}</span>
@@ -354,7 +354,7 @@ export function Register() {
                       )}
                     >
                       <span className="flex items-center justify-between">
-                        <span className="font-display text-[12px] font-bold tracking-[0.18em] text-ink">
+                        <span className="font-display text-[12px] font-bold text-ink">
                           {plan.name}
                         </span>
                         {selected && <Check size={13} className="text-hud" />}
@@ -384,12 +384,12 @@ export function Register() {
           </div>
         )}
 
-        <div className="mt-6 flex items-center justify-between gap-3 border-t border-hud/10 pt-5">
+        <div className="mt-6 flex items-center justify-between gap-3 border-t border-stroke pt-5">
           <button
             type="button"
             disabled={submitting}
             onClick={() => (step === 0 ? navigate('/login') : setStep((s) => s - 1))}
-            className="flex items-center gap-2 rounded-[8px] border border-stroke/70 px-3.5 py-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-ink-dim transition-all duration-200 hover:border-hud/40 hover:text-ink disabled:opacity-40"
+            className="flex items-center gap-2 rounded-[10px] border border-stroke px-3.5 py-2.5 text-[13px] font-medium text-ink-dim transition-colors hover:border-hud/40 hover:text-ink disabled:opacity-40"
           >
             <ArrowLeft size={12} />
             {step === 0 ? 'Cancelar' : 'Voltar'}
@@ -401,14 +401,14 @@ export function Register() {
             // Sem isto, um duplo clique dispara dois `signUp` e o segundo falha
             // com "e-mail já registrado" — parecendo erro de quem se cadastrou.
             disabled={submitting}
-            className="group flex items-center gap-2 rounded-[8px] border border-hud/50 bg-hud/12 px-5 py-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-hud transition-all duration-200 hover:bg-hud/20 hover: disabled:pointer-events-none disabled:opacity-50"
+            className="flex items-center gap-2 rounded-[10px] bg-hud px-5 py-2.5 text-[13px] font-semibold text-white transition-colors hover:bg-hud-deep disabled:pointer-events-none disabled:opacity-50"
           >
             {submitting
               ? 'Criando…'
               : step === STEPS.length - 1
                 ? 'Criar minha clínica'
                 : 'Continuar'}
-            <ArrowRight size={12} className="transition-transform group-hover:translate-x-0.5" />
+            <ArrowRight size={12} />
           </button>
         </div>
       </div>
@@ -500,7 +500,7 @@ function EnvironmentReady({
         </div>
 
         <div>
-          <span className="inline-flex items-center gap-2 rounded-[8px] border border-success/40 bg-success/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-success">
+          <span className="inline-flex items-center gap-2 rounded-[8px] border border-success/40 bg-success/10 px-2.5 py-1 font-mono text-[10px] text-success">
             <Check size={12} />
             Ambiente criado
           </span>

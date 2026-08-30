@@ -154,7 +154,7 @@ export function AppointmentForm({
                 set('clientId', '');
                 setClientQuery('');
               }}
-              className="shrink-0 font-mono text-[9px] uppercase tracking-[0.14em] text-ink-faint transition-colors hover:text-hud"
+              className="shrink-0 font-mono text-[9px] text-ink-faint transition-colors hover:text-hud"
             >
               Trocar
             </button>
@@ -237,7 +237,7 @@ export function AppointmentForm({
                     )
                   }
                   className={cn(
-                    'flex items-center gap-1.5 rounded-[8px] border px-2 py-1.5 font-mono text-[10px] uppercase tracking-[0.1em] transition-all duration-200',
+                    'flex items-center gap-1.5 rounded-[8px] border px-2 py-1.5 font-mono text-[10px] transition-all duration-200',
                     selected
                       ? 'border-hud/50 bg-hud/12 text-hud'
                       : 'border-stroke/60 text-ink-faint hover:border-hud/30',
