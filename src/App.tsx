@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import { SessionProvider } from '@/auth/SessionProvider';
 import { RedirectIfAuthenticated, RequireAuth, RequireCapability } from '@/auth/guards';
@@ -44,10 +44,19 @@ const PlatformSettings = lazy(() => import('@/pages/admin/PlatformSettings').the
 /** Fallback das rotas sob demanda — a forma da página antes do conteúdo chegar. */
 const Loading = () => <PageSkeleton />;
 
+/**
+ * GitHub Pages não tem servidor para reescrever `/app/dashboard` de volta a
+ * `index.html` — um F5 fora da raiz vira 404. `HashRouter` evita o problema
+ * porque a rota inteira (`/#/app/dashboard`) nunca chega ao servidor. Em
+ * qualquer outro host (Vercel, Netlify, o próprio Supabase por trás de um
+ * proxy) o build normal usa `BrowserRouter`, com URL limpa de verdade.
+ */
+const Router = import.meta.env.VITE_GITHUB_PAGES ? HashRouter : BrowserRouter;
+
 export default function App() {
   return (
     <SessionProvider>
-      <BrowserRouter>
+      <Router>
         <Routes>
           {/* ---------- AMBIENTE PÚBLICO ---------- */}
           <Route element={<SiteLayout />}>
@@ -188,7 +197,7 @@ export default function App() {
 
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </SessionProvider>
   );
 }
