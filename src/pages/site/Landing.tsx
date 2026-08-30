@@ -17,9 +17,7 @@ import {
 import { limitLabel } from '@/data/saas';
 import { usePublicPlans } from '@/services/publicPlans';
 import { formatBRL } from '@/utils/format';
-import { CornerBrackets } from '@/components/ui/CornerBrackets';
 import { StatusIndicator } from '@/components/ui/StatusIndicator';
-import { useTheme } from '@/themes/ThemeProvider';
 import { cn } from '@/utils/cn';
 
 const FEATURES = [
@@ -46,33 +44,6 @@ const FAQ = [
   { q: 'E se eu quiser cancelar?', a: 'Cancelamento pelo painel, sem ligação e sem multa. Você mantém acesso até o fim do período pago e pode exportar todos os seus dados.' },
 ];
 
-/**
- * Ornamentos da vitrine, isolados para responderem ao tema em um só lugar.
- * Em temas sóbrios a landing perde o brilho de ficção científica sem que
- * nenhuma seção precise ser reescrita.
- */
-function Sweep() {
-  const { theme } = useTheme();
-  if (theme.effects.chrome < 0.5) return null;
-  return (
-    <span
-      className="anim-sweep pointer-events-none absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-hud/15 to-transparent"
-      aria-hidden
-    />
-  );
-}
-
-function Scan() {
-  const { theme } = useTheme();
-  if (theme.effects.chrome < 0.5) return null;
-  return (
-    <div
-      className="anim-scanline pointer-events-none absolute inset-x-0 h-10 bg-gradient-to-b from-transparent via-hud/[0.06] to-transparent"
-      aria-hidden
-    />
-  );
-}
-
 export function Landing() {
   return (
     <div className="relative">
@@ -89,7 +60,7 @@ export function Landing() {
 
 function Nav() {
   return (
-    <header className="sticky top-0 z-30 border-b border-hud/10 bg-void/70 backdrop-blur-xl">
+    <header className="sticky top-0 z-30 border-b border-stroke bg-panel">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5">
         <Link to="/" className="flex items-center gap-2.5">
           <span className="grid h-8 w-8 place-items-center rounded-full bg-hud/12 font-display text-[12px] font-bold text-hud">
@@ -101,13 +72,13 @@ function Nav() {
         <div className="flex items-center gap-2">
           <Link
             to="/login"
-            className="rounded-[8px] border border-stroke/70 px-3.5 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-ink-dim transition-all duration-200 hover:border-hud/50 hover:text-hud"
+            className="rounded-[10px] px-3.5 py-2 text-[13px] font-medium text-ink-dim transition-colors hover:text-hud"
           >
             Entrar
           </Link>
           <Link
             to="/register"
-            className="rounded-[8px] border border-hud/50 bg-hud/12 px-3.5 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-hud transition-all duration-200 hover:bg-hud/20"
+            className="rounded-[10px] bg-hud px-3.5 py-2 text-[13px] font-semibold text-white transition-colors hover:bg-hud-deep"
           >
             Testar grátis
           </Link>
@@ -136,7 +107,7 @@ function Hero() {
           <br />
           Seu sistema.
           <br />
-          <span className="text-hud text-glow">Sua tecnologia.</span>
+          <span className="text-hud">Sua tecnologia.</span>
         </h1>
 
         <p className="mx-auto mt-6 max-w-xl text-[15px] leading-relaxed text-ink-dim">
@@ -147,15 +118,14 @@ function Hero() {
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link
             to="/register"
-            className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-[8px] border border-hud/50 bg-hud/12 px-6 py-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-hud transition-all duration-200 hover:bg-hud/20 hover: sm:w-auto"
+            className="group flex w-full items-center justify-center gap-2 rounded-[10px] bg-hud px-6 py-3.5 text-[14px] font-semibold text-white transition-colors hover:bg-hud-deep sm:w-auto"
           >
-            <Sweep />
-            <span className="relative">Testar 14 dias grátis</span>
-            <ArrowRight size={13} className="relative transition-transform group-hover:translate-x-1" />
+            Testar 14 dias grátis
+            <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
           </Link>
           <Link
             to="/login"
-            className="flex w-full items-center justify-center gap-2 rounded-[8px] border border-stroke/70 px-6 py-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-ink-dim transition-all duration-200 hover:border-hud/40 hover:text-ink sm:w-auto"
+            className="flex w-full items-center justify-center gap-2 rounded-[10px] border border-stroke px-6 py-3.5 text-[14px] font-medium text-ink-dim transition-colors hover:border-hud/40 hover:text-ink sm:w-auto"
           >
             Já tenho conta
           </Link>
@@ -171,9 +141,6 @@ function Hero() {
         transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         className="holo-panel relative mx-auto mt-16 max-w-4xl overflow-hidden p-4 sm:p-6"
       >
-        <CornerBrackets />
-        <Scan />
-
         <div className="mb-4 flex items-center justify-between">
           <span className="tech-label">Demonstração do painel</span>
           <StatusIndicator tone="live" pulse label="Ao vivo" compact />
@@ -274,8 +241,7 @@ function Features() {
               transition={{ duration: 0.4, delay: (i % 3) * 0.08 }}
               className="holo-panel group relative p-5 transition-all duration-300 hover:border-hud/40"
             >
-              <CornerBrackets tone="faint" />
-              <span className="grid h-10 w-10 place-items-center rounded-[8px] border border-hud/25 bg-hud/[0.06] text-hud transition-transform duration-200 group-hover:scale-105">
+              <span className="grid h-10 w-10 place-items-center rounded-[10px] bg-hud/10 text-hud transition-transform duration-200 group-hover:scale-105">
                 <Icon size={18} strokeWidth={1.5} />
               </span>
               <h3 className="mt-4 font-display text-[14px] font-semibold text-ink">{f.title}</h3>
@@ -334,23 +300,19 @@ function Pricing() {
                 featured && 'border-hud/45',
               )}
             >
-              <CornerBrackets tone={featured ? 'hud' : 'faint'} />
-
               {featured && (
-                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 rounded-full border border-hud/50 bg-void px-3 py-1 font-mono text-[9px] uppercase tracking-[0.18em] text-hud">
+                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 rounded-full bg-hud px-3 py-1 text-[11px] font-semibold text-white">
                   Mais escolhido
                 </span>
               )}
 
-              <h3 className="font-display text-[15px] font-bold tracking-[0.2em] text-ink">
-                {plan.name}
-              </h3>
+              <h3 className="font-display text-[16px] font-bold text-ink">{plan.name}</h3>
               <p className="mt-1.5 min-h-[34px] text-[12px] leading-snug text-ink-faint">
                 {plan.tagline}
               </p>
 
               <div className="mt-5 flex items-baseline gap-1">
-                <span className="font-display text-[31px] font-bold text-hud text-glow tnum">
+                <span className="font-display text-[31px] font-bold text-hud tnum">
                   {formatBRL(plan.priceCents)}
                 </span>
                 <span className="text-[12px] text-ink-faint">/mês</span>
@@ -377,10 +339,10 @@ function Pricing() {
                 to="/register"
                 state={{ planId: plan.id }}
                 className={cn(
-                  'mt-6 rounded-[8px] border py-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] transition-all duration-200',
+                  'mt-6 rounded-[10px] py-3 text-center text-[13.5px] font-semibold transition-colors',
                   featured
-                    ? 'border-hud/50 bg-hud/12 text-hud hover:bg-hud/20'
-                    : 'border-stroke/70 text-ink-dim hover:border-hud/40 hover:text-hud',
+                    ? 'bg-hud text-white hover:bg-hud-deep'
+                    : 'border border-stroke text-ink-dim hover:border-hud/40 hover:text-hud',
                 )}
               >
                 Começar com {plan.name}
@@ -452,18 +414,16 @@ function Faq() {
 
 function Footer() {
   return (
-    <footer className="border-t border-hud/10 px-5 py-12">
+    <footer className="border-t border-stroke px-5 py-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center">
         <div className="flex items-center gap-2.5">
           <Sparkles size={15} className="text-hud" />
-          <span className="font-display text-[13px] font-bold tracking-[0.28em] text-ink">
-            PRODENT
-          </span>
+          <span className="font-display text-[14px] font-bold text-ink">PRODENT</span>
         </div>
 
         <Link
           to="/register"
-          className="flex items-center gap-2 rounded-[8px] border border-hud/50 bg-hud/12 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-hud transition-all duration-200 hover:bg-hud/20"
+          className="flex items-center gap-2 rounded-[10px] bg-hud px-6 py-3 text-[13.5px] font-semibold text-white transition-colors hover:bg-hud-deep"
         >
           Criar minha clínica
           <ArrowRight size={13} />
@@ -471,10 +431,10 @@ function Footer() {
 
         <div className="flex items-center gap-2">
           <ShieldCheck size={12} className="text-success" />
-          <span className="tech-label">DADOS ISOLADOS POR EMPRESA · LGPD</span>
+          <span className="text-[11.5px] text-ink-faint">Dados isolados por empresa · LGPD</span>
         </div>
 
-        <p className="tech-label">© 2026 PRODENT · TODOS OS DIREITOS RESERVADOS</p>
+        <p className="text-[11px] text-ink-faint">© 2026 PRODENT · Todos os direitos reservados</p>
       </div>
     </footer>
   );

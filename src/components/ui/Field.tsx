@@ -186,13 +186,8 @@ export function Toggle({
       </span>
 
       <span className="flex shrink-0 items-center gap-2">
-        <span
-          className={cn(
-            'font-mono text-[9px] uppercase tracking-[0.16em]',
-            checked ? 'text-hud' : 'text-ink-faint',
-          )}
-        >
-          {checked ? 'ON' : 'OFF'}
+        <span className={cn('text-[11px] font-medium', checked ? 'text-hud' : 'text-ink-faint')}>
+          {checked ? 'Ativado' : 'Desativado'}
         </span>
         <span
           className={cn(

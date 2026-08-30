@@ -225,15 +225,19 @@ option {
   background-size: 12px 12px;
 }
 
-/* Rótulo de painel. PRODENT não tem tema de HUD — a família é sempre a do
-   corpo do texto, nunca mono; caixa e espaçamento continuam vindo do tema. */
+/* Legenda pequena — rótulo de campo, contagem, período. Uma legenda comum:
+   sem tracking largo, sem caixa alta forçada por CSS. `lowercase` normaliza
+   os textos herdados em maiúscula ("NOME", "TELEFONE") sem precisar editar
+   cada tela que ainda os escreve assim. */
 .tech-label {
   font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: var(--tech-size, 0.625rem);
-  letter-spacing: var(--tech-tracking);
-  text-transform: var(--tech-case, uppercase);
+  font-weight: 500;
+  font-size: 0.72rem;
+  text-transform: lowercase;
   color: var(--color-ink-faint);
+}
+.tech-label::first-letter {
+  text-transform: uppercase;
 }
 
 /* Brilho de texto — usado com parcimônia, só em número-herói. */
