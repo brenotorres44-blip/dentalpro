@@ -44,7 +44,7 @@ export function TechCalendar({
       <div className="flex items-center justify-between gap-2">
         <button
           onClick={() => shift(-1)}
-          className="grid h-7 w-7 place-items-center rounded-[3px] border border-stroke/60 text-ink-dim transition-all duration-200 hover:border-hud/50 hover:text-hud"
+          className="grid h-7 w-7 place-items-center rounded-[8px] border border-stroke/60 text-ink-dim transition-all duration-200 hover:border-hud/50 hover:text-hud"
           aria-label="Mês anterior"
         >
           <ChevronLeft size={14} />
@@ -68,7 +68,7 @@ export function TechCalendar({
 
         <button
           onClick={() => shift(1)}
-          className="grid h-7 w-7 place-items-center rounded-[3px] border border-stroke/60 text-ink-dim transition-all duration-200 hover:border-hud/50 hover:text-hud"
+          className="grid h-7 w-7 place-items-center rounded-[8px] border border-stroke/60 text-ink-dim transition-all duration-200 hover:border-hud/50 hover:text-hud"
           aria-label="Próximo mês"
         >
           <ChevronRight size={14} />
@@ -104,7 +104,7 @@ export function TechCalendar({
               transition={{ duration: 0.2, delay: Math.min(i, 34) * 0.008 }}
               whileTap={{ scale: 0.92 }}
               className={cn(
-                'group relative aspect-square rounded-[3px] border text-[11px] font-medium',
+                'group relative aspect-square rounded-[8px] border text-[11px] font-medium',
                 'flex flex-col items-center justify-center gap-1',
                 'transition-colors duration-200',
                 isSelected
@@ -121,7 +121,7 @@ export function TechCalendar({
               {isSelected && (
                 <motion.span
                   layoutId="calendar-selected"
-                  className="absolute inset-0 rounded-[3px] bg-hud shadow-[0_0_18px_-2px_var(--color-hud)]"
+                  className="absolute inset-0 rounded-[8px] bg-hud"
                   transition={{ type: 'spring', stiffness: 480, damping: 34 }}
                   aria-hidden
                 />
@@ -130,7 +130,7 @@ export function TechCalendar({
               {/* círculo luminoso do dia corrente */}
               {isToday && !isSelected && (
                 <span
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-[60%] rounded-full border border-hud/70 shadow-[0_0_12px_-2px_var(--color-hud)] anim-breathe"
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-[60%] rounded-full border border-hud/70 anim-breathe"
                   aria-hidden
                 />
               )}

@@ -80,7 +80,7 @@ export function Drawer({
             <header className="flex items-start justify-between gap-3 border-b border-hud/12 p-5">
               <div className="flex min-w-0 items-start gap-3">
                 {icon && (
-                  <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-[3px] border border-hud/25 bg-hud/[0.06] text-hud">
+                  <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-[8px] border border-hud/25 bg-hud/[0.06] text-hud">
                     {icon}
                   </span>
                 )}

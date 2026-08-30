@@ -30,7 +30,7 @@ export function ProfessionalsPanel({ professionals }: { professionals: Professio
             initial="hidden"
             animate={ready ? 'visible' : 'hidden'}
             className={cn(
-              'group flex items-center gap-3 rounded-[3px] border border-transparent',
+              'group flex items-center gap-3 rounded-[8px] border border-transparent',
               'bg-white/[0.015] px-3 py-2.5 transition-all duration-200 ease-out',
               'hover:border-hud/25 hover:bg-hud/[0.05]',
               p.status === 'offline' && 'opacity-60 hover:opacity-100',

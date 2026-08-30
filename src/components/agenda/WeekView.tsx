@@ -72,7 +72,7 @@ export function WeekView({ date, onPick }: { date: Date; onPick: (date: Date) =>
             key={dateKey(entry.day)}
             onClick={() => onPick(entry.day)}
             className={cn(
-              'flex flex-col gap-2 rounded-[3px] border px-2.5 py-3 text-left transition-all duration-200',
+              'flex flex-col gap-2 rounded-[8px] border px-2.5 py-3 text-left transition-all duration-200',
               selected
                 ? 'border-hud/50 bg-hud/[0.08]'
                 : 'border-hud/10 bg-white/[0.015] hover:border-hud/30',

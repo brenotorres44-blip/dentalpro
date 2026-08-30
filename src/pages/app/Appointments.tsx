@@ -161,7 +161,7 @@ export function Appointments() {
       {/* ---------- faixa de contexto ---------- */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          <div className="flex items-center rounded-[3px] border border-stroke/70">
+          <div className="flex items-center rounded-[8px] border border-stroke/70">
             <button
               onClick={() => shiftDay(-1)}
               className="grid h-9 w-9 place-items-center text-ink-faint transition-colors hover:text-hud"
@@ -198,13 +198,13 @@ export function Appointments() {
         </div>
 
         <div className="flex items-center gap-2">
-          <div className="flex rounded-[3px] border border-stroke/70 p-0.5">
+          <div className="flex rounded-[8px] border border-stroke/70 p-0.5">
             {(['dia', 'semana'] as const).map((v) => (
               <button
                 key={v}
                 onClick={() => setView(v)}
                 className={cn(
-                  'rounded-[2px] px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-colors duration-200',
+                  'rounded-[8px] px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-colors duration-200',
                   view === v ? 'bg-hud/15 text-hud' : 'text-ink-faint hover:text-ink-dim',
                 )}
               >
@@ -291,7 +291,7 @@ export function Appointments() {
                 {blocks.map((b) => (
                   <li
                     key={b.id}
-                    className="flex items-center gap-2 rounded-[3px] border border-hud/10 bg-white/[0.02] px-2.5 py-2"
+                    className="flex items-center gap-2 rounded-[8px] border border-hud/10 bg-white/[0.02] px-2.5 py-2"
                   >
                     <span className="min-w-0 flex-1">
                       <span className="block truncate text-[11.5px] text-ink-dim">
@@ -349,7 +349,7 @@ export function Appointments() {
                   return (
                     <li
                       key={entry.id}
-                      className="flex flex-col gap-1.5 rounded-[3px] border border-warn/20 bg-warn/[0.04] px-2.5 py-2"
+                      className="flex flex-col gap-1.5 rounded-[8px] border border-warn/20 bg-warn/[0.04] px-2.5 py-2"
                     >
                       <div className="flex items-start gap-2">
                         <span className="min-w-0 flex-1">
@@ -373,7 +373,7 @@ export function Appointments() {
                           setCreating({ professionalId: staff[0]?.id ?? '', time: '09:00' });
                           setPrefill(entry);
                         }}
-                        className="rounded-[3px] border border-hud/35 bg-hud/10 py-1.5 font-mono text-[9px] uppercase tracking-[0.14em] text-hud transition-colors hover:bg-hud/20"
+                        className="rounded-[8px] border border-hud/35 bg-hud/10 py-1.5 font-mono text-[9px] uppercase tracking-[0.14em] text-hud transition-colors hover:bg-hud/20"
                       >
                         Oferecer vaga
                       </button>

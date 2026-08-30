@@ -140,7 +140,7 @@ export function Settings() {
       {/* ---------- barra de salvamento ---------- */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-[3px] border border-hud/25 bg-hud/[0.06] text-hud">
+          <span className="grid h-9 w-9 place-items-center rounded-[8px] border border-hud/25 bg-hud/[0.06] text-hud">
             <SettingsIcon size={16} />
           </span>
           <div>
@@ -288,7 +288,7 @@ export function Settings() {
               <div
                 key={index}
                 className={cn(
-                  'flex items-center gap-2 rounded-[3px] border px-2.5 py-2 transition-colors duration-200',
+                  'flex items-center gap-2 rounded-[8px] border px-2.5 py-2 transition-colors duration-200',
                   day.closed ? 'border-stroke/50 bg-white/[0.01]' : 'border-hud/15 bg-hud/[0.03]',
                 )}
               >
@@ -296,7 +296,7 @@ export function Settings() {
                   type="button"
                   onClick={() => setHours(index, { closed: !day.closed })}
                   className={cn(
-                    'w-16 shrink-0 rounded-[2px] border px-1.5 py-1 font-mono text-[10px] uppercase tracking-[0.1em] transition-colors duration-200',
+                    'w-16 shrink-0 rounded-[8px] border px-1.5 py-1 font-mono text-[10px] uppercase tracking-[0.1em] transition-colors duration-200',
                     day.closed
                       ? 'border-stroke/60 text-ink-faint hover:border-hud/30'
                       : 'border-hud/40 bg-hud/10 text-hud',
@@ -323,7 +323,7 @@ export function Settings() {
                         value={day[key]}
                         onChange={(e) => setHours(index, { [key]: e.target.value })}
                         aria-label={`${key === 'open' ? 'Abre' : 'Fecha'} ${WEEKDAY_FULL[index]}`}
-                        className="w-[74px] rounded-[3px] border border-stroke/70 bg-void/50 px-1.5 py-1 text-center font-mono text-[11px] text-ink outline-none transition-colors focus:border-hud/60 tnum"
+                        className="w-[74px] rounded-[8px] border border-stroke/70 bg-void/50 px-1.5 py-1 text-center font-mono text-[11px] text-ink outline-none transition-colors focus:border-hud/60 tnum"
                       />
                     ))}
                   </span>
@@ -343,7 +343,7 @@ export function Settings() {
                   type="date"
                   value={holiday}
                   onChange={(e) => setHoliday(e.target.value)}
-                  className="flex-1 rounded-[3px] border border-stroke/70 bg-void/50 px-3 py-2 font-mono text-[12px] text-ink outline-none transition-colors focus:border-hud/60 tnum"
+                  className="flex-1 rounded-[8px] border border-stroke/70 bg-void/50 px-3 py-2 font-mono text-[12px] text-ink outline-none transition-colors focus:border-hud/60 tnum"
                   aria-label="Data do feriado"
                 />
                 <TechButton
@@ -367,7 +367,7 @@ export function Settings() {
                   {draft.holidays.map((date) => (
                     <span
                       key={date}
-                      className="flex items-center gap-1.5 rounded-[3px] border border-warn/30 bg-warn/[0.07] px-2 py-1"
+                      className="flex items-center gap-1.5 rounded-[8px] border border-warn/30 bg-warn/[0.07] px-2 py-1"
                     >
                       <span className="font-mono text-[10.5px] text-warn tnum">
                         {formatShortDate(new Date(`${date}T12:00:00`))}

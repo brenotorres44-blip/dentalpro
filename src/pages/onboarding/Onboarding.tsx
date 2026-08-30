@@ -13,7 +13,6 @@ import {
   Smile,
   UserRound,
 } from 'lucide-react';
-import { CornerBrackets } from '@/components/ui/CornerBrackets';
 import { ProgressBar } from '@/components/ui/ProgressBar';
 import { StatusIndicator } from '@/components/ui/StatusIndicator';
 import { useSession } from '@/auth/SessionProvider';
@@ -74,13 +73,11 @@ export function Onboarding() {
           transition={{ type: 'spring', stiffness: 250, damping: 22 }}
           className="flex flex-col items-center gap-5 text-center"
         >
-          <span className="grid h-20 w-20 place-items-center rounded-full border-2 border-hud/60 text-hud shadow-[0_0_44px_-8px_var(--color-hud)]">
+          <span className="grid h-20 w-20 place-items-center rounded-full border-2 border-hud/60 text-hud">
             <Rocket size={32} className="anim-float" />
           </span>
-          <h1 className="font-display text-[19px] font-bold tracking-[0.22em] text-hud text-glow">
-            SEU SISTEMA ESTÁ PRONTO
-          </h1>
-          <p className="tech-label anim-breathe">INICIALIZANDO AMBIENTE</p>
+          <h1 className="font-display text-[20px] font-semibold text-ink">Tudo pronto</h1>
+          <p className="text-[13px] text-ink-faint">Abrindo o painel...</p>
         </motion.div>
       </div>
     );
@@ -94,9 +91,9 @@ export function Onboarding() {
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="mb-6 text-center">
-          <span className="tech-label text-hud">CONFIGURAÇÃO INICIAL</span>
-          <h1 className="mt-2 font-display text-[23px] font-bold tracking-[0.16em] text-ink">
-            VAMOS CONFIGURAR SUA CLÍNICA
+          <span className="tech-label text-hud">Configuração inicial</span>
+          <h1 className="mt-2 font-display text-[22px] font-semibold text-ink">
+            Vamos configurar sua clínica
           </h1>
           <p className="mt-2 text-[13px] text-ink-dim">
             {company?.name ?? 'Sua clínica'} · marque o que já está pronto
@@ -104,15 +101,13 @@ export function Onboarding() {
         </div>
 
         <div className="holo-panel relative p-5 sm:p-6">
-          <CornerBrackets />
-
           {/* progresso */}
           <div className="mb-6 flex flex-col gap-2">
             <div className="flex items-baseline justify-between">
-              <span className="tech-label">PROGRESSO</span>
-              <span className="font-display text-[21px] font-semibold text-hud text-glow tnum">
+              <span className="tech-label">Progresso</span>
+              <span className="font-display text-[21px] font-semibold text-hud tnum">
                 {Math.round(animatedProgress)}%
-                <span className="ml-1.5 text-[11px] font-normal text-ink-faint">CONFIGURADO</span>
+                <span className="ml-1.5 text-[11px] font-normal text-ink-faint">concluído</span>
               </span>
             </div>
             <ProgressBar value={progress} label="Progresso da configuração" />
@@ -132,7 +127,7 @@ export function Onboarding() {
                   <button
                     onClick={() => toggle(task.id)}
                     className={cn(
-                      'group flex w-full items-center gap-3 rounded-[3px] border px-3 py-3 text-left',
+                      'group flex w-full items-center gap-3 rounded-[8px] border px-3 py-3 text-left',
                       'transition-all duration-200',
                       isDone
                         ? 'border-success/25 bg-success/[0.05]'
@@ -144,7 +139,7 @@ export function Onboarding() {
                       className={cn(
                         'grid h-7 w-7 shrink-0 place-items-center rounded-full border transition-all duration-200',
                         isDone
-                          ? 'border-success/60 bg-success/15 text-success shadow-[0_0_12px_-3px_var(--color-success)]'
+                          ? 'border-success/60 bg-success/15 text-success'
                           : 'border-stroke/70 text-ink-faint group-hover:border-hud/50 group-hover:text-hud',
                       )}
                     >
@@ -176,7 +171,7 @@ export function Onboarding() {
                       >
                         {task.label}
                         {task.required && !isDone && (
-                          <span className="rounded-[2px] border border-warn/30 bg-warn/10 px-1.5 py-px font-mono text-[8px] uppercase tracking-[0.12em] text-warn">
+                          <span className="rounded-[8px] border border-warn/30 bg-warn/10 px-1.5 py-px font-mono text-[8px] uppercase tracking-[0.12em] text-warn">
                             obrigatório
                           </span>
                         )}
@@ -205,10 +200,10 @@ export function Onboarding() {
               onClick={enter}
               disabled={!complete}
               className={cn(
-                'group flex items-center justify-center gap-2 rounded-[3px] border py-3',
+                'group flex items-center justify-center gap-2 rounded-[8px] border py-3',
                 'font-mono text-[11px] uppercase tracking-[0.2em] transition-all duration-200',
                 complete
-                  ? 'border-hud/50 bg-hud/12 text-hud hover:bg-hud/20 hover:shadow-[0_0_28px_-8px_var(--color-hud)]'
+                  ? 'border-hud/50 bg-hud/12 text-hud hover:bg-hud/20'
                   : 'cursor-not-allowed border-stroke/50 text-ink-faint/60',
               )}
             >

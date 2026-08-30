@@ -99,7 +99,7 @@ export function Dashboard() {
         className="flex flex-wrap items-center justify-between gap-3"
       >
         <div className="flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center rounded-[3px] border border-hud/25 bg-hud/[0.06] text-hud">
+          <span className="grid h-9 w-9 place-items-center rounded-[8px] border border-hud/25 bg-hud/[0.06] text-hud">
             <CalendarDays size={16} />
           </span>
           <div>
@@ -128,7 +128,7 @@ export function Dashboard() {
 
         <div className="flex items-center gap-2">
           {lowStock > 0 && (
-            <span className="flex items-center gap-1.5 rounded-[3px] border border-critical/35 bg-critical/10 px-2.5 py-1.5">
+            <span className="flex items-center gap-1.5 rounded-[8px] border border-critical/35 bg-critical/10 px-2.5 py-1.5">
               <StatusIndicator tone="critical" pulse />
               <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-critical">
                 {lowStock} {lowStock === 1 ? 'item crítico' : 'itens críticos'}

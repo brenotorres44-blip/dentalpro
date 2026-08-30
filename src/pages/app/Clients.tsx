@@ -305,7 +305,7 @@ export function Clients() {
             e.stopPropagation();
             navigate(`/app/clients/${c.id}`);
           }}
-          className="inline-flex items-center gap-1.5 rounded-[6px] border border-stroke px-2.5 py-1.5 text-[11.5px] font-medium text-ink-dim transition-colors hover:border-hud/40 hover:text-hud"
+          className="inline-flex items-center gap-1.5 rounded-[10px] border border-stroke px-2.5 py-1.5 text-[11.5px] font-medium text-ink-dim transition-colors hover:border-hud/40 hover:text-hud"
         >
           <Smile size={13} /> Prontuário
         </button>
@@ -461,7 +461,7 @@ function ClientForm({
             ['FALTAS', formatInt(insights?.noShows ?? 0)],
             ['CANCELAMENTOS', formatInt(insights?.cancellations ?? 0)],
           ].map(([label, value]) => (
-            <div key={label} className="rounded-[3px] border border-hud/10 bg-white/[0.02] px-3 py-2">
+            <div key={label} className="rounded-[8px] border border-hud/10 bg-white/[0.02] px-3 py-2">
               <div className="tech-label">{label}</div>
               <div className="mt-1 truncate font-mono text-[12px] text-ink tnum">{value}</div>
             </div>
@@ -491,7 +491,7 @@ function ClientForm({
               type="button"
               onClick={() => setTab(value)}
               className={cn(
-                'rounded-[3px] border px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-200',
+                'rounded-[8px] border px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-200',
                 tab === value
                   ? 'border-hud/50 bg-hud/12 text-hud'
                   : 'border-stroke/60 text-ink-faint hover:border-hud/30',
@@ -515,7 +515,7 @@ function ClientForm({
             {history.map(({ date, appointment }) => (
               <li
                 key={appointment.id}
-                className="flex items-center gap-3 rounded-[3px] border border-hud/[0.09] bg-white/[0.015] px-3 py-2.5"
+                className="flex items-center gap-3 rounded-[8px] border border-hud/[0.09] bg-white/[0.015] px-3 py-2.5"
               >
                 <div className="shrink-0">
                   <div className="font-mono text-[11.5px] text-ink tnum">
@@ -610,7 +610,7 @@ function ClientForm({
           </SelectField>
 
           {/* ---------- etiquetas ---------- */}
-          <section className="flex flex-col gap-2 rounded-[3px] border border-hud/12 bg-white/[0.015] p-3">
+          <section className="flex flex-col gap-2 rounded-[8px] border border-hud/12 bg-white/[0.015] p-3">
             <div className="flex items-center gap-2">
               <Tag size={13} className="text-hud/70" />
               <span className="tech-label">ETIQUETAS</span>
@@ -627,7 +627,7 @@ function ClientForm({
                       set('tags', selected ? draft.tags.filter((t) => t !== tag) : [...draft.tags, tag])
                     }
                     className={cn(
-                      'rounded-[3px] border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.1em] transition-all duration-200',
+                      'rounded-[8px] border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.1em] transition-all duration-200',
                       selected
                         ? 'border-hud/50 bg-hud/12 text-hud'
                         : 'border-stroke/60 text-ink-faint hover:border-hud/30',
@@ -651,7 +651,7 @@ function ClientForm({
                   setCustomTag('');
                 }}
                 placeholder="Nova etiqueta e Enter"
-                className="flex-1 rounded-[3px] border border-stroke/70 bg-void/50 px-2.5 py-1.5 text-[11.5px] text-ink outline-none transition-colors placeholder:text-ink-faint/60 focus:border-hud/60"
+                className="flex-1 rounded-[8px] border border-stroke/70 bg-void/50 px-2.5 py-1.5 text-[11.5px] text-ink outline-none transition-colors placeholder:text-ink-faint/60 focus:border-hud/60"
               />
             </div>
           </section>

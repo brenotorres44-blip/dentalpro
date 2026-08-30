@@ -41,10 +41,10 @@ export function ModulePage({
               initial={{ opacity: 0, scale: 0.8, rotate: -12 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-              className="relative grid h-16 w-16 shrink-0 place-items-center rounded-[4px] border border-hud/30 bg-hud/[0.06] text-hud"
+              className="relative grid h-16 w-16 shrink-0 place-items-center rounded-[9px] border border-hud/30 bg-hud/[0.06] text-hud"
             >
               <span
-                className="absolute inset-0 rounded-[4px] border border-hud/20 anim-breathe"
+                className="absolute inset-0 rounded-[9px] border border-hud/20 anim-breathe"
                 aria-hidden
               />
               <Icon size={26} strokeWidth={1.4} />
@@ -76,7 +76,7 @@ export function ModulePage({
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 + i * 0.06 }}
-                className="flex items-start gap-2.5 rounded-[3px] border border-hud/10 bg-white/[0.015] px-3 py-2.5 transition-colors duration-200 hover:border-hud/30"
+                className="flex items-start gap-2.5 rounded-[8px] border border-hud/10 bg-white/[0.015] px-3 py-2.5 transition-colors duration-200 hover:border-hud/30"
               >
                 <Check size={13} className="mt-0.5 shrink-0 text-hud/70" />
                 <span className="text-[12px] leading-snug text-ink-dim">{c}</span>

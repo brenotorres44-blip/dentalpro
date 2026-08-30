@@ -13,11 +13,11 @@ interface Ripple {
 
 const VARIANTS: Record<Variant, string> = {
   primary:
-    'border-hud/40 bg-hud/10 text-hud hover:border-hud/80 hover:bg-hud/20 hover:shadow-[0_0_22px_-6px_var(--color-hud)]',
+    'border-hud/40 bg-hud/10 text-hud hover:border-hud/80 hover:bg-hud/20',
   ghost:
     'border-stroke/70 bg-white/[0.02] text-ink-dim hover:border-hud/50 hover:text-hud hover:bg-hud/[0.07]',
   critical:
-    'border-critical/45 bg-critical/10 text-critical hover:border-critical/85 hover:bg-critical/20 hover:shadow-[0_0_22px_-6px_var(--color-critical)]',
+    'border-critical/45 bg-critical/10 text-critical hover:border-critical/85 hover:bg-critical/20',
 };
 
 /**
@@ -54,7 +54,7 @@ export function TechButton({
       }}
       className={cn(
         'group relative isolate inline-flex items-center justify-center gap-2 overflow-hidden',
-        'rounded-[6px] border px-3.5 py-2',
+        'rounded-[10px] border px-3.5 py-2',
         'text-[13px] font-medium',
         'transition-all duration-200 ease-out active:scale-[0.97]',
         'disabled:pointer-events-none disabled:opacity-40',

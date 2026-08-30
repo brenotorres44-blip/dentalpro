@@ -187,7 +187,7 @@ export function Financial() {
               e.stopPropagation();
               remove('entries', l.id);
             }}
-            className="grid h-7 w-7 place-items-center rounded-[2px] border border-transparent text-ink-faint transition-all hover:border-critical/40 hover:text-critical"
+            className="grid h-7 w-7 place-items-center rounded-[8px] border border-transparent text-ink-faint transition-all hover:border-critical/40 hover:text-critical"
             aria-label="Excluir lançamento"
           >
             <Trash2 size={13} />
@@ -296,7 +296,7 @@ export function Financial() {
                   return (
                     <li
                       key={p.id}
-                      className="flex items-center gap-2 rounded-[3px] border border-hud/[0.09] bg-white/[0.015] px-2.5 py-2"
+                      className="flex items-center gap-2 rounded-[8px] border border-hud/[0.09] bg-white/[0.015] px-2.5 py-2"
                     >
                       <span className="min-w-0 flex-1">
                         <span className="block truncate text-[11.5px] text-ink">{p.name}</span>
@@ -343,7 +343,7 @@ export function Financial() {
                 return (
                   <li
                     key={shift}
-                    className="flex items-center gap-2 rounded-[3px] border border-hud/[0.09] bg-white/[0.015] px-2.5 py-2"
+                    className="flex items-center gap-2 rounded-[8px] border border-hud/[0.09] bg-white/[0.015] px-2.5 py-2"
                   >
                     <span className="min-w-0 flex-1">
                       <span className="block text-[11.5px] text-ink">{SHIFT_LABEL[shift]}</span>
@@ -361,7 +361,7 @@ export function Financial() {
                     ) : (
                       <button
                         onClick={() => setClosing(shift)}
-                        className="shrink-0 rounded-[3px] border border-hud/35 bg-hud/10 px-2 py-1 font-mono text-[9px] uppercase tracking-[0.14em] text-hud transition-colors hover:bg-hud/20"
+                        className="shrink-0 rounded-[8px] border border-hud/35 bg-hud/10 px-2 py-1 font-mono text-[9px] uppercase tracking-[0.14em] text-hud transition-colors hover:bg-hud/20"
                       >
                         Fechar
                       </button>
@@ -431,7 +431,7 @@ function EntryDrawer({ open, onClose }: { open: boolean; onClose: () => void }) 
               type="button"
               onClick={() => set('direction', value)}
               className={cn(
-                'rounded-[3px] border py-2.5 font-mono text-[10px] uppercase tracking-[0.16em] transition-all duration-200',
+                'rounded-[8px] border py-2.5 font-mono text-[10px] uppercase tracking-[0.16em] transition-all duration-200',
                 draft.direction === value
                   ? value === 'entrada'
                     ? 'border-success/50 bg-success/12 text-success'
@@ -563,7 +563,7 @@ function ClosingDrawer({ shift, onClose }: { shift: Shift | null; onClose: () =>
     >
       {shift && (
         <div className="flex flex-col gap-4">
-          <div className="rounded-[3px] border border-hud/15 bg-hud/[0.05] p-3">
+          <div className="rounded-[8px] border border-hud/15 bg-hud/[0.05] p-3">
             <span className="tech-label">PREVISTO EM DINHEIRO</span>
             <p className="mt-1 font-display text-[20px] font-semibold text-hud tnum">
               {formatBRL(expected)}

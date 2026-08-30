@@ -79,7 +79,7 @@ export function CreateCompany() {
         <CornerBrackets tone="hud" />
 
         <div className="flex items-center gap-3">
-          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-[4px] border border-hud/30 bg-hud/[0.06] text-hud">
+          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-[9px] border border-hud/30 bg-hud/[0.06] text-hud">
             <Store size={20} strokeWidth={1.5} />
           </span>
           <div className="min-w-0">
@@ -163,14 +163,14 @@ export function CreateCompany() {
                       setBaseTheme(t.id);
                     }}
                     className={cn(
-                      'flex items-center gap-2 rounded-[3px] border px-2 py-2 text-left transition-all duration-200',
+                      'flex items-center gap-2 rounded-[8px] border px-2 py-2 text-left transition-all duration-200',
                       selected
                         ? 'border-hud/60 bg-hud/12'
                         : 'border-stroke/60 hover:border-hud/35',
                     )}
                   >
                     <span
-                      className="h-5 w-5 shrink-0 rounded-[2px] border border-white/10"
+                      className="h-5 w-5 shrink-0 rounded-[8px] border border-white/10"
                       style={{
                         background: `linear-gradient(135deg, ${t.tokens.hud}, ${t.tokens.void})`,
                       }}

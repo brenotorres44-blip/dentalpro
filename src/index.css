@@ -140,24 +140,24 @@ option {
    PRIMITIVAS HOLOGRÁFICAS
    ========================================================================= */
 
-/* Vidro do painel: uma camada, nunca empilhada — blur aninhado mata a GPU. */
+/* Card do painel. Nasce como um cartão comum — cor sólida, borda estrutural,
+   sombra rasa — e só ganha vidro (gradiente, blur, borda luminosa) nos temas
+   que ligam `glow`. Sem HUD para carregar, um card não precisa parecer vidro. */
 .holo-panel {
   position: relative;
   background:
+    color-mix(in oklab, var(--color-panel) var(--panel-mix), var(--color-elevated)),
     linear-gradient(
       160deg,
-      color-mix(in oklab, var(--color-elevated) var(--panel-mix), transparent) 0%,
-      color-mix(in oklab, var(--color-deep) calc(var(--panel-mix) + 16%), transparent) 55%,
-      color-mix(in oklab, var(--color-abyss) calc(var(--panel-mix) + 26%), transparent) 100%
+      color-mix(in oklab, var(--color-hud) calc(3% * var(--fx-glow)), transparent) 0%,
+      transparent 60%
     );
-  border: 1px solid color-mix(in oklab, var(--color-hud) calc(16% * var(--fx-glow)), transparent);
+  border: 1px solid color-mix(in oklab, var(--color-stroke) 100%, transparent);
   border-radius: var(--radius-card);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(calc(12px * var(--fx-glow)));
   box-shadow:
-    inset 0 1px 0 0 color-mix(in oklab, var(--color-hud) calc(12% * var(--fx-glow)), transparent),
-    0 1px 2px rgb(0 0 0 / calc(0.28 * var(--fx-shadow))),
-    0 12px 40px -18px rgb(0 0 0 / calc(0.9 * var(--fx-shadow))),
-    0 32px 64px -32px rgb(0 0 0 / calc(0.7 * var(--fx-shadow)));
+    0 1px 2px rgb(0 0 0 / calc(0.05 + 0.05 * var(--fx-shadow))),
+    0 1px 3px rgb(0 0 0 / calc(0.04 + 0.06 * var(--fx-shadow)));
 }
 
 /* Corpo padrão do painel: o respiro responde à densidade do tema. */
@@ -188,11 +188,10 @@ option {
 }
 
 .holo-panel--critical {
-  border-color: color-mix(in oklab, var(--color-critical) 35%, transparent);
+  border-color: color-mix(in oklab, var(--color-critical) 45%, var(--color-stroke));
   box-shadow:
-    inset 0 1px 0 0 color-mix(in oklab, var(--color-critical) 14%, transparent),
-    0 0 28px -12px color-mix(in oklab, var(--color-critical) 60%, transparent),
-    0 12px 40px -18px rgb(0 0 0 / 0.9);
+    0 1px 2px rgb(0 0 0 / calc(0.05 + 0.05 * var(--fx-shadow))),
+    0 1px 3px rgb(0 0 0 / calc(0.04 + 0.06 * var(--fx-shadow)));
 }
 
 /* Malha técnica de fundo — estática, custo zero de runtime. */

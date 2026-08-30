@@ -109,7 +109,7 @@ function CompanyProfile({ company }: { company: Company }) {
 
   if (!isSupabaseConfigured) {
     return (
-      <p className="mt-5 rounded-[3px] border border-warn/30 bg-warn/[0.06] px-3 py-2.5 text-[11px] leading-relaxed text-warn">
+      <p className="mt-5 rounded-[8px] border border-warn/30 bg-warn/[0.06] px-3 py-2.5 text-[11px] leading-relaxed text-warn">
         O perfil completo — assinatura, equipe, uso e auditoria — vem do banco. Em modo
         demonstração não há o que mostrar aqui.
       </p>
@@ -118,7 +118,7 @@ function CompanyProfile({ company }: { company: Company }) {
 
   if (erro) {
     return (
-      <p className="mt-5 rounded-[3px] border border-critical/30 bg-critical/[0.06] px-3 py-2.5 text-[11px] leading-relaxed text-critical">
+      <p className="mt-5 rounded-[8px] border border-critical/30 bg-critical/[0.06] px-3 py-2.5 text-[11px] leading-relaxed text-critical">
         {erro}
       </p>
     );
@@ -197,14 +197,14 @@ function CompanyProfile({ company }: { company: Company }) {
             ].map(([label, value]) => (
               <div
                 key={label}
-                className="rounded-[3px] border border-hud/10 bg-white/[0.02] px-3 py-2"
+                className="rounded-[8px] border border-hud/10 bg-white/[0.02] px-3 py-2"
               >
                 <dt className="tech-label">{label}</dt>
                 <dd className="mt-1 truncate font-mono text-[11.5px] text-ink tnum">{value}</dd>
               </div>
             ))}
             {sub.cancelAtPeriodEnd && (
-              <p className="col-span-2 rounded-[2px] border border-warn/30 bg-warn/[0.07] px-2 py-1.5 font-mono text-[9.5px] uppercase tracking-[0.12em] text-warn">
+              <p className="col-span-2 rounded-[8px] border border-warn/30 bg-warn/[0.07] px-2 py-1.5 font-mono text-[9.5px] uppercase tracking-[0.12em] text-warn">
                 cancelamento pedido — encerra no fim do período
               </p>
             )}
@@ -225,7 +225,7 @@ function CompanyProfile({ company }: { company: Company }) {
           invoices.map((f) => (
             <div
               key={f.id}
-              className="flex items-center justify-between gap-3 rounded-[2px] border border-hud/10 bg-white/[0.02] px-2.5 py-2"
+              className="flex items-center justify-between gap-3 rounded-[8px] border border-hud/10 bg-white/[0.02] px-2.5 py-2"
             >
               <span className="min-w-0">
                 <span className="block font-mono text-[11px] text-ink tnum">
@@ -252,7 +252,7 @@ function CompanyProfile({ company }: { company: Company }) {
         {team.map((m) => (
           <div
             key={m.userId}
-            className="flex items-center justify-between gap-3 rounded-[2px] border border-hud/10 bg-white/[0.02] px-2.5 py-2"
+            className="flex items-center justify-between gap-3 rounded-[8px] border border-hud/10 bg-white/[0.02] px-2.5 py-2"
           >
             <span className="min-w-0">
               <span className="block truncate text-[11.5px] text-ink">{m.name}</span>
@@ -277,7 +277,7 @@ function CompanyProfile({ company }: { company: Company }) {
             {invites.map((c) => (
               <div
                 key={c.id}
-                className="flex items-center justify-between gap-3 rounded-[2px] border border-warn/25 bg-warn/[0.05] px-2.5 py-2"
+                className="flex items-center justify-between gap-3 rounded-[8px] border border-warn/25 bg-warn/[0.05] px-2.5 py-2"
               >
                 <span className="min-w-0 truncate text-[11px] text-ink-dim">{c.email}</span>
                 <span className="shrink-0 font-mono text-[9.5px] uppercase tracking-[0.12em] text-warn">
@@ -364,7 +364,7 @@ export function Companies() {
       render: (c) => (
         <div className="flex items-center gap-2.5">
           <span
-            className="grid h-7 w-7 shrink-0 place-items-center rounded-[2px] font-display text-[10px] font-semibold"
+            className="grid h-7 w-7 shrink-0 place-items-center rounded-[8px] font-display text-[10px] font-semibold"
             style={{
               background: `color-mix(in oklab, var(--color-hud) 14%, transparent)`,
               color: 'var(--color-hud)',
@@ -445,7 +445,7 @@ export function Companies() {
             e.stopPropagation();
             setSelectedId(c.id);
           }}
-          className="grid h-7 w-7 place-items-center rounded-[2px] border border-transparent text-ink-faint transition-all duration-150 hover:border-hud/40 hover:text-hud"
+          className="grid h-7 w-7 place-items-center rounded-[8px] border border-transparent text-ink-faint transition-all duration-150 hover:border-hud/40 hover:text-hud"
           aria-label={`Ações de ${c.name}`}
         >
           <MoreHorizontal size={14} />
@@ -474,7 +474,7 @@ export function Companies() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Buscar por empresa, responsável, e-mail ou cidade"
-                className="w-full rounded-[3px] border border-stroke/70 bg-void/50 py-2.5 pl-9 pr-9 text-[12.5px] text-ink outline-none transition-all duration-200 placeholder:text-ink-faint/60 focus:border-hud/60 focus:bg-hud/[0.04]"
+                className="w-full rounded-[8px] border border-stroke/70 bg-void/50 py-2.5 pl-9 pr-9 text-[12.5px] text-ink outline-none transition-all duration-200 placeholder:text-ink-faint/60 focus:border-hud/60 focus:bg-hud/[0.04]"
               />
               {query && (
                 <button
@@ -490,7 +490,7 @@ export function Companies() {
             <select
               value={planId}
               onChange={(e) => setPlanId(e.target.value)}
-              className="rounded-[3px] border border-stroke/70 bg-void/50 px-3 py-2.5 font-mono text-[11px] uppercase tracking-wider text-ink-dim outline-none transition-colors focus:border-hud/60"
+              className="rounded-[8px] border border-stroke/70 bg-void/50 px-3 py-2.5 font-mono text-[11px] uppercase tracking-wider text-ink-dim outline-none transition-colors focus:border-hud/60"
             >
               <option value="all">Todos os planos</option>
               {plans.map((p) => (
@@ -504,7 +504,7 @@ export function Companies() {
               onClick={() =>
                 setSort((s) => SORT_CYCLE[(SORT_CYCLE.indexOf(s) + 1) % SORT_CYCLE.length])
               }
-              className="flex items-center justify-center gap-2 rounded-[3px] border border-stroke/70 px-3 py-2.5 font-mono text-[10px] uppercase tracking-wider text-ink-dim transition-colors hover:border-hud/50 hover:text-hud"
+              className="flex items-center justify-center gap-2 rounded-[8px] border border-stroke/70 px-3 py-2.5 font-mono text-[10px] uppercase tracking-wider text-ink-dim transition-colors hover:border-hud/50 hover:text-hud"
             >
               <ArrowUpDown size={12} />
               {SORT_LABEL[sort]}
@@ -517,7 +517,7 @@ export function Companies() {
                 key={f.value}
                 onClick={() => setStatus(f.value)}
                 className={cn(
-                  'rounded-[3px] border px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-200',
+                  'rounded-[8px] border px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-200',
                   status === f.value
                     ? 'border-hud/50 bg-hud/12 text-hud'
                     : 'border-stroke/60 text-ink-faint hover:border-hud/30 hover:text-ink-dim',
@@ -599,7 +599,7 @@ export function Companies() {
                   ].map(([label, value]) => (
                     <div
                       key={label}
-                      className="rounded-[3px] border border-hud/10 bg-white/[0.02] px-3 py-2.5"
+                      className="rounded-[8px] border border-hud/10 bg-white/[0.02] px-3 py-2.5"
                     >
                       <dt className="tech-label">{label}</dt>
                       <dd className="mt-1 truncate font-mono text-[12px] text-ink tnum">{value}</dd>
@@ -621,7 +621,7 @@ export function Companies() {
                             status: e.target.value as CompanyStatus,
                           })
                         }
-                        className="rounded-[3px] border border-stroke/70 bg-void/50 px-3 py-2 font-mono text-[11px] uppercase tracking-wider text-ink outline-none transition-colors focus:border-hud/60"
+                        className="rounded-[8px] border border-stroke/70 bg-void/50 px-3 py-2 font-mono text-[11px] uppercase tracking-wider text-ink outline-none transition-colors focus:border-hud/60"
                       >
                         {STATUS_FILTERS.filter((f) => f.value !== 'all').map((f) => (
                           <option key={f.value} value={f.value}>
@@ -636,7 +636,7 @@ export function Companies() {
                       <select
                         value={selected.planId}
                         onChange={(e) => updateCompany(selected.id, { planId: e.target.value })}
-                        className="rounded-[3px] border border-stroke/70 bg-void/50 px-3 py-2 font-mono text-[11px] uppercase tracking-wider text-ink outline-none transition-colors focus:border-hud/60"
+                        className="rounded-[8px] border border-stroke/70 bg-void/50 px-3 py-2 font-mono text-[11px] uppercase tracking-wider text-ink outline-none transition-colors focus:border-hud/60"
                       >
                         {plans.map((p) => (
                           <option key={p.id} value={p.id}>
@@ -662,7 +662,7 @@ export function Companies() {
                 {can('platform.impersonate') && (
                   <button
                     onClick={() => access(selected)}
-                    className="group flex items-center justify-center gap-2 rounded-[3px] border border-hud/50 bg-hud/12 py-3 font-mono text-[10px] uppercase tracking-[0.18em] text-hud transition-all duration-200 hover:bg-hud/20 hover:shadow-[0_0_24px_-8px_var(--color-hud)]"
+                    className="group flex items-center justify-center gap-2 rounded-[8px] border border-hud/50 bg-hud/12 py-3 font-mono text-[10px] uppercase tracking-[0.18em] text-hud transition-all duration-200 hover:bg-hud/20"
                   >
                     <LogIn size={13} />
                     Acessar ambiente

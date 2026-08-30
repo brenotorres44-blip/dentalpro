@@ -83,7 +83,7 @@ function ToothRow({
             key={num}
             type="button"
             onClick={() => onPick(num)}
-            className="flex min-w-9 flex-col items-center gap-0.5 rounded-[6px] p-1 transition-colors hover:bg-hud/[0.06]"
+            className="flex min-w-9 flex-col items-center gap-0.5 rounded-[10px] p-1 transition-colors hover:bg-hud/[0.06]"
           >
             <span className="font-mono text-[10px] text-ink-faint tnum">{num}</span>
             <ToothIcon cond={estado.cond} small={small} />
@@ -167,7 +167,7 @@ export function Odontograma({
             className="flex items-center gap-1.5 rounded-full border border-stroke px-2.5 py-1 text-[11px] text-ink-dim"
           >
             <span
-              className="h-2.5 w-2.5 shrink-0 rounded-[3px]"
+              className="h-2.5 w-2.5 shrink-0 rounded-[8px]"
               style={{ background: c.cor, border: `1.5px solid ${c.stroke}` }}
             />
             {c.label}
@@ -190,14 +190,14 @@ export function Odontograma({
                 type="button"
                 onClick={() => setDraftCond(c.id)}
                 className={cn(
-                  'flex items-center gap-2 rounded-[6px] border px-3 py-2.5 text-left text-[12.5px] font-medium transition-colors',
+                  'flex items-center gap-2 rounded-[10px] border px-3 py-2.5 text-left text-[12.5px] font-medium transition-colors',
                   draftCond === c.id
                     ? 'border-hud/60 bg-hud/[0.08] text-hud'
                     : 'border-stroke text-ink-dim hover:border-hud/30',
                 )}
               >
                 <span
-                  className="h-2.5 w-2.5 shrink-0 rounded-[3px]"
+                  className="h-2.5 w-2.5 shrink-0 rounded-[8px]"
                   style={{ background: c.cor, border: `1.5px solid ${c.stroke}` }}
                 />
                 {c.label}

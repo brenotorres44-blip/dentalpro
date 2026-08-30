@@ -31,7 +31,7 @@ export function SearchInput({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full rounded-[3px] border border-stroke/70 bg-void/50 py-2.5 pl-9 pr-9 text-[12.5px] text-ink outline-none transition-all duration-200 placeholder:text-ink-faint/60 focus:border-hud/60 focus:bg-hud/[0.04]"
+        className="w-full rounded-[8px] border border-stroke/70 bg-void/50 py-2.5 pl-9 pr-9 text-[12.5px] text-ink outline-none transition-all duration-200 placeholder:text-ink-faint/60 focus:border-hud/60 focus:bg-hud/[0.04]"
       />
       {value && (
         <button
@@ -72,7 +72,7 @@ export function FilterChips<T extends string>({
           onClick={() => onChange(option.value)}
           aria-pressed={value === option.value}
           className={cn(
-            'rounded-[3px] border px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-200',
+            'rounded-[8px] border px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-200',
             value === option.value
               ? 'border-hud/50 bg-hud/12 text-hud'
               : 'border-stroke/60 text-ink-faint hover:border-hud/30 hover:text-ink-dim',
@@ -113,7 +113,7 @@ export function SortCycle<T extends string>({
         const index = options.findIndex((o) => o.value === value);
         onChange(options[(index + 1) % options.length].value);
       }}
-      className="flex shrink-0 items-center justify-center gap-2 rounded-[3px] border border-stroke/70 px-3 py-2.5 font-mono text-[10px] uppercase tracking-wider text-ink-dim transition-colors hover:border-hud/50 hover:text-hud"
+      className="flex shrink-0 items-center justify-center gap-2 rounded-[8px] border border-stroke/70 px-3 py-2.5 font-mono text-[10px] uppercase tracking-wider text-ink-dim transition-colors hover:border-hud/50 hover:text-hud"
       title="Trocar a ordenação"
     >
       <ArrowUpDown size={12} />
@@ -142,7 +142,7 @@ export function InlineSelect({
       onChange={(e) => onChange(e.target.value)}
       aria-label={label}
       className={cn(
-        'shrink-0 rounded-[3px] border border-stroke/70 bg-void/50 px-3 py-2.5 font-mono text-[11px] uppercase tracking-wider text-ink-dim outline-none transition-colors focus:border-hud/60',
+        'shrink-0 rounded-[8px] border border-stroke/70 bg-void/50 px-3 py-2.5 font-mono text-[11px] uppercase tracking-wider text-ink-dim outline-none transition-colors focus:border-hud/60',
         className,
       )}
     >

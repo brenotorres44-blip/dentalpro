@@ -29,9 +29,9 @@ export function Field({
           {...props}
           aria-invalid={Boolean(error)}
           className={cn(
-            'w-full rounded-[3px] border bg-void/50 py-2.5 pr-3 text-[13px] text-ink',
+            'w-full rounded-[8px] border bg-void/50 py-2.5 pr-3 text-[13px] text-ink',
             'placeholder:text-ink-faint/60 outline-none transition-all duration-200',
-            'focus:bg-hud/[0.04] focus:shadow-[0_0_20px_-8px_var(--color-hud)]',
+            'focus:bg-hud/[0.04]',
             icon ? 'pl-9' : 'pl-3',
             error ? 'border-critical/60 focus:border-critical' : 'border-stroke/70 focus:border-hud/60',
           )}
@@ -59,7 +59,7 @@ export function SelectField({
       <select
         {...props}
         className={cn(
-          'w-full rounded-[3px] border border-stroke/70 bg-void/50 px-3 py-2.5 text-[13px] text-ink',
+          'w-full rounded-[8px] border border-stroke/70 bg-void/50 px-3 py-2.5 text-[13px] text-ink',
           'outline-none transition-all duration-200 focus:border-hud/60 focus:bg-hud/[0.04]',
         )}
       >
@@ -81,7 +81,7 @@ export function TextareaField({
       <textarea
         {...props}
         className={cn(
-          'w-full resize-y rounded-[3px] border border-stroke/70 bg-void/50 px-3 py-2.5 text-[13px] leading-relaxed text-ink',
+          'w-full resize-y rounded-[8px] border border-stroke/70 bg-void/50 px-3 py-2.5 text-[13px] leading-relaxed text-ink',
           'placeholder:text-ink-faint/60 outline-none transition-all duration-200',
           'focus:border-hud/60 focus:bg-hud/[0.04]',
         )}
@@ -131,7 +131,7 @@ export function MoneyField({
           onValueChange(Number(digits.slice(0, 9) || '0'));
         }}
         className={cn(
-          'w-full rounded-[3px] border bg-void/50 px-3 py-2.5 text-right font-mono text-[13px] text-ink tnum',
+          'w-full rounded-[8px] border bg-void/50 px-3 py-2.5 text-right font-mono text-[13px] text-ink tnum',
           'outline-none transition-all duration-200 focus:bg-hud/[0.04]',
           'disabled:opacity-50',
           error ? 'border-critical/60 focus:border-critical' : 'border-stroke/70 focus:border-hud/60',
@@ -173,7 +173,7 @@ export function Toggle({
       disabled={disabled}
       onClick={() => onChange(!checked)}
       className={cn(
-        'group flex w-full items-center justify-between gap-4 rounded-[3px] border px-3 py-2.5 text-left',
+        'group flex w-full items-center justify-between gap-4 rounded-[8px] border px-3 py-2.5 text-left',
         'transition-all duration-200 disabled:opacity-40',
         checked ? 'border-hud/35 bg-hud/[0.06]' : 'border-stroke/60 bg-white/[0.015] hover:border-hud/25',
       )}
@@ -205,7 +205,7 @@ export function Toggle({
             className={cn(
               'absolute top-1/2 h-2.5 w-2.5 -translate-y-1/2 rounded-full transition-transform duration-200',
               checked
-                ? 'translate-x-[18px] bg-hud shadow-[0_0_8px_1px_var(--color-hud)]'
+                ? 'translate-x-[18px] bg-hud'
                 : 'translate-x-[3px] bg-ink-faint',
             )}
           />
@@ -236,7 +236,7 @@ export function Callout({
     <p
       role={tone === 'critical' ? 'alert' : undefined}
       className={cn(
-        'flex items-start gap-2 rounded-[3px] border px-3 py-2.5 text-[11.5px] leading-relaxed',
+        'flex items-start gap-2 rounded-[8px] border px-3 py-2.5 text-[11.5px] leading-relaxed',
         CALLOUT_TONE[tone],
       )}
     >

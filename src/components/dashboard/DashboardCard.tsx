@@ -57,7 +57,7 @@ export function DashboardCard({
       className={cn(
         'holo-panel group relative flex flex-col gap-3 p-4',
         'transition-shadow duration-300',
-        'hover:border-hud/40 hover:shadow-[0_0_36px_-14px_var(--color-hud)]',
+        'hover:border-hud/40',
         // Referência para o `cqi` do número-herói.
         '[container-type:inline-size]',
       )}
@@ -75,7 +75,7 @@ export function DashboardCard({
         <span className="tech-label leading-tight">{label}</span>
         <span
           className={cn(
-            'grid h-7 w-7 shrink-0 place-items-center rounded-[3px] border border-hud/20 bg-hud/[0.06]',
+            'grid h-7 w-7 shrink-0 place-items-center rounded-[8px] border border-hud/20 bg-hud/[0.06]',
             accent,
             'transition-all duration-200 group-hover:border-hud/50 group-hover:scale-105',
           )}
@@ -103,7 +103,7 @@ export function DashboardCard({
           {delta !== undefined && (
             <span
               className={cn(
-                'inline-flex items-center gap-1 rounded-[2px] border px-1.5 py-0.5 font-mono text-[10px] font-medium tnum',
+                'inline-flex items-center gap-1 rounded-[8px] border px-1.5 py-0.5 font-mono text-[10px] font-medium tnum',
                 positive
                   ? 'border-success/30 bg-success/10 text-success'
                   : 'border-critical/30 bg-critical/10 text-critical',

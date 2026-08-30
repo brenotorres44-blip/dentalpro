@@ -71,7 +71,7 @@ export function BlockDrawer({
                 type="time"
                 value={draft[key]}
                 onChange={(e) => setDraft((d) => ({ ...d, [key]: e.target.value }))}
-                className="w-full rounded-[3px] border border-stroke/70 bg-void/50 px-3 py-2.5 font-mono text-[12.5px] text-ink outline-none transition-colors focus:border-hud/60 tnum"
+                className="w-full rounded-[8px] border border-stroke/70 bg-void/50 px-3 py-2.5 font-mono text-[12.5px] text-ink outline-none transition-colors focus:border-hud/60 tnum"
               />
             </label>
           ))}
@@ -83,7 +83,7 @@ export function BlockDrawer({
             value={draft.reason}
             onChange={(e) => setDraft((d) => ({ ...d, reason: e.target.value }))}
             placeholder="Manutenção, treinamento, almoço estendido"
-            className="w-full rounded-[3px] border border-stroke/70 bg-void/50 px-3 py-2.5 text-[13px] text-ink outline-none transition-colors placeholder:text-ink-faint/60 focus:border-hud/60"
+            className="w-full rounded-[8px] border border-stroke/70 bg-void/50 px-3 py-2.5 text-[13px] text-ink outline-none transition-colors placeholder:text-ink-faint/60 focus:border-hud/60"
           />
         </label>
 

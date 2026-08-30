@@ -57,14 +57,14 @@ export class ErrorBoundary extends Component<Props, State> {
           <summary className="tech-label cursor-pointer transition-colors hover:text-hud">
             DETALHES TÉCNICOS
           </summary>
-          <pre className="mt-2 max-h-40 overflow-auto rounded-[3px] border border-critical/20 bg-void/60 p-3 font-mono text-[10.5px] leading-relaxed text-critical/90">
+          <pre className="mt-2 max-h-40 overflow-auto rounded-[8px] border border-critical/20 bg-void/60 p-3 font-mono text-[10.5px] leading-relaxed text-critical/90">
             {error.message}
           </pre>
         </details>
 
         <button
           onClick={() => this.setState({ error: null })}
-          className="flex items-center gap-2 rounded-[3px] border border-hud/40 bg-hud/10 px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-hud transition-all duration-200 hover:border-hud/70 hover:bg-hud/20"
+          className="flex items-center gap-2 rounded-[8px] border border-hud/40 bg-hud/10 px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-hud transition-all duration-200 hover:border-hud/70 hover:bg-hud/20"
         >
           <RotateCcw size={12} />
           Tentar novamente

@@ -3,12 +3,12 @@ import { cn } from '@/utils/cn';
 export type Tone = 'ok' | 'live' | 'idle' | 'warn' | 'critical' | 'info';
 
 const TONE_MAP: Record<Tone, { dot: string; text: string; ring: string; glow: string }> = {
-  ok: { dot: 'bg-success', text: 'text-success', ring: 'bg-success', glow: 'shadow-[0_0_10px_1px_var(--color-success)]' },
-  live: { dot: 'bg-hud', text: 'text-hud', ring: 'bg-hud', glow: 'shadow-[0_0_10px_1px_var(--color-hud)]' },
+  ok: { dot: 'bg-success', text: 'text-success', ring: 'bg-success', glow: '' },
+  live: { dot: 'bg-hud', text: 'text-hud', ring: 'bg-hud', glow: '' },
   idle: { dot: 'bg-idle', text: 'text-idle', ring: 'bg-idle', glow: '' },
-  warn: { dot: 'bg-warn', text: 'text-warn', ring: 'bg-warn', glow: 'shadow-[0_0_10px_1px_var(--color-warn)]' },
-  critical: { dot: 'bg-critical', text: 'text-critical', ring: 'bg-critical', glow: 'shadow-[0_0_10px_1px_var(--color-critical)]' },
-  info: { dot: 'bg-electric', text: 'text-electric', ring: 'bg-electric', glow: 'shadow-[0_0_10px_1px_var(--color-electric)]' },
+  warn: { dot: 'bg-warn', text: 'text-warn', ring: 'bg-warn', glow: '' },
+  critical: { dot: 'bg-critical', text: 'text-critical', ring: 'bg-critical', glow: '' },
+  info: { dot: 'bg-electric', text: 'text-electric', ring: 'bg-electric', glow: '' },
 };
 
 /**

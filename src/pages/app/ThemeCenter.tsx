@@ -84,7 +84,7 @@ export function ThemeCenter() {
           }
         >
           {!canCustomize && (
-            <div className="mb-4 rounded-[3px] border border-warn/25 bg-warn/[0.06] px-3 py-2.5 text-[11.5px] leading-relaxed text-ink-dim">
+            <div className="mb-4 rounded-[8px] border border-warn/25 bg-warn/[0.06] px-3 py-2.5 text-[11.5px] leading-relaxed text-ink-dim">
               A personalização de cores está disponível a partir do plano{' '}
               <strong className="text-warn">PRO</strong>. Os sete temas prontos continuam
               disponíveis no seu plano atual.
@@ -110,7 +110,7 @@ export function ThemeCenter() {
                         type="color"
                         value={current}
                         onChange={(e) => setColor(f.key, e.target.value)}
-                        className="h-8 w-14 cursor-pointer rounded-[3px] border border-stroke/70 bg-transparent p-0.5"
+                        className="h-8 w-14 cursor-pointer rounded-[8px] border border-stroke/70 bg-transparent p-0.5"
                         aria-label={f.label}
                       />
                     </span>

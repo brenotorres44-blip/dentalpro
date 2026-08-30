@@ -80,7 +80,7 @@ export function AppointmentList({
             initial="hidden"
             animate={ready ? 'visible' : 'hidden'}
             className={cn(
-              'group relative flex items-center gap-3 rounded-[3px] border border-transparent',
+              'group relative flex items-center gap-3 rounded-[8px] border border-transparent',
               'bg-white/[0.015] px-3 py-2.5',
               'transition-all duration-200 ease-out',
               'hover:border-hud/25 hover:bg-hud/[0.05] hover:translate-x-0.5',
@@ -91,7 +91,7 @@ export function AppointmentList({
               className={cn(
                 'absolute inset-y-1.5 left-0 w-[2px] rounded-full transition-all duration-200',
                 a.status === 'concluido' && 'bg-success/70',
-                a.status === 'em_andamento' && 'bg-hud shadow-[0_0_10px_1px_var(--color-hud)]',
+                a.status === 'em_andamento' && 'bg-hud',
                 a.status === 'agendado' && 'bg-electric/50',
                 a.status === 'cancelado' && 'bg-critical/70',
                 a.status === 'falta' && 'bg-warn/70',
@@ -116,7 +116,7 @@ export function AppointmentList({
             <div className="flex shrink-0 flex-col items-end gap-1">
               <span
                 className={cn(
-                  'inline-flex items-center gap-1.5 rounded-[2px] border px-1.5 py-0.5',
+                  'inline-flex items-center gap-1.5 rounded-[8px] border px-1.5 py-0.5',
                   'font-mono text-[9px] tracking-[0.14em]',
                   s.chip,
                 )}

@@ -12,7 +12,7 @@ export function Skeleton({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        'relative overflow-hidden rounded-[3px] bg-white/[0.04]',
+        'relative overflow-hidden rounded-[8px] bg-white/[0.04]',
         className,
       )}
       aria-hidden

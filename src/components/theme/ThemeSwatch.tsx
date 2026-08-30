@@ -27,9 +27,9 @@ export function ThemeSwatch({
       type={onSelect ? 'button' : undefined}
       aria-pressed={onSelect ? selected : undefined}
       className={cn(
-        'group relative block w-full overflow-hidden rounded-[3px] border text-left transition-all duration-200',
+        'group relative block w-full overflow-hidden rounded-[8px] border text-left transition-all duration-200',
         selected
-          ? 'border-hud/70 shadow-[0_0_28px_-10px_var(--color-hud)]'
+          ? 'border-hud/70'
           : 'border-stroke/60 hover:border-hud/40',
       )}
     >
@@ -49,7 +49,7 @@ export function ThemeSwatch({
 
         {/* painel falso */}
         <div
-          className="relative flex h-full flex-col gap-1.5 rounded-[2px] p-2"
+          className="relative flex h-full flex-col gap-1.5 rounded-[8px] p-2"
           style={{
             background: `linear-gradient(160deg, ${t.elevated}dd, ${t.abyss}ee)`,
             border: `1px solid ${t.hud}33`,

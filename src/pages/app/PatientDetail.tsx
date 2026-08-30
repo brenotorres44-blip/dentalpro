@@ -118,7 +118,7 @@ export function PatientDetail() {
                 <Badge tone={client.active ? 'ok' : 'idle'}>{client.active ? 'Ativo' : 'Inativo'}</Badge>
               </div>
               {client.allergies && (
-                <div className="rounded-[4px] border border-critical/25 bg-critical/[0.06] px-2.5 py-2 text-critical">
+                <div className="rounded-[9px] border border-critical/25 bg-critical/[0.06] px-2.5 py-2 text-critical">
                   <span className="font-semibold">Alergias: </span>
                   {client.allergies}
                 </div>
@@ -212,7 +212,7 @@ export function PatientDetail() {
                 ) : (
                   <div className="flex flex-col gap-2.5">
                     {client.evolution.map((n) => (
-                      <div key={n.id} className="rounded-[6px] border-l-2 border-hud bg-hud/[0.03] px-4 py-3">
+                      <div key={n.id} className="rounded-[10px] border-l-2 border-hud bg-hud/[0.03] px-4 py-3">
                         <div className="text-[11px] text-ink-faint">
                           {formatShortDate(new Date(n.at))} · {n.author}
                         </div>

@@ -111,7 +111,7 @@ export function ResetPassword() {
               animate={{ opacity: 1, scale: 1 }}
               className="flex flex-col items-center gap-4 py-4 text-center"
             >
-              <span className="grid h-14 w-14 place-items-center rounded-full border-2 border-success/50 text-success shadow-[0_0_28px_-8px_var(--color-success)]">
+              <span className="grid h-14 w-14 place-items-center rounded-full border-2 border-success/50 text-success">
                 <ShieldCheck size={24} />
               </span>
               <p className="font-mono text-[12px] uppercase tracking-[0.2em] text-success">
@@ -130,7 +130,7 @@ export function ResetPassword() {
               </Callout>
               <Link
                 to="/forgot-password"
-                className="flex items-center justify-center gap-2 rounded-[3px] border border-hud/50 bg-hud/12 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-hud transition-all duration-200 hover:bg-hud/20"
+                className="flex items-center justify-center gap-2 rounded-[8px] border border-hud/50 bg-hud/12 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-hud transition-all duration-200 hover:bg-hud/20"
               >
                 Pedir novo link
               </Link>
@@ -164,7 +164,7 @@ export function ResetPassword() {
               <button
                 type="submit"
                 disabled={busy || linkOk === null}
-                className="flex items-center justify-center gap-2 rounded-[3px] border border-hud/50 bg-hud/12 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-hud transition-all duration-200 hover:bg-hud/20 hover:shadow-[0_0_24px_-8px_var(--color-hud)] disabled:opacity-45"
+                className="flex items-center justify-center gap-2 rounded-[8px] border border-hud/50 bg-hud/12 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-hud transition-all duration-200 hover:bg-hud/20 hover: disabled:opacity-45"
               >
                 <KeyRound size={13} />
                 {busy ? 'Gravando…' : 'Gravar senha'}

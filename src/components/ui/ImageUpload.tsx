@@ -81,7 +81,7 @@ export function ImageUpload({
             'group relative grid h-20 w-20 shrink-0 place-items-center overflow-hidden',
             'border border-dashed border-stroke/70 bg-void/40 transition-colors duration-200',
             'hover:border-hud/50 disabled:opacity-50',
-            round ? 'rounded-full' : 'rounded-[3px]',
+            round ? 'rounded-full' : 'rounded-[8px]',
           )}
           aria-label={`Enviar ${label.toLowerCase()}`}
         >

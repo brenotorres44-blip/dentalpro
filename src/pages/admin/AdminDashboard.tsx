@@ -54,7 +54,7 @@ function MrrBars({ series }: { series: MrrPoint[] }) {
         const isLast = i === series.length - 1;
         return (
           <div key={m.month} className="group relative flex h-full flex-1 flex-col justify-end gap-2">
-            <span className="pointer-events-none absolute -top-1 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-[2px] border border-hud/30 bg-void px-1.5 py-0.5 font-mono text-[9px] text-hud opacity-0 transition-opacity duration-150 group-hover:opacity-100 tnum">
+            <span className="pointer-events-none absolute -top-1 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-[8px] border border-hud/30 bg-void px-1.5 py-0.5 font-mono text-[9px] text-hud opacity-0 transition-opacity duration-150 group-hover:opacity-100 tnum">
               {formatBRLCompact(m.valueCents)}
             </span>
 
@@ -62,7 +62,7 @@ function MrrBars({ series }: { series: MrrPoint[] }) {
               className={cn(
                 'w-full rounded-t-[2px] transition-colors duration-200',
                 isLast
-                  ? 'bg-gradient-to-t from-hud-deep to-hud-bright shadow-[0_0_18px_-4px_var(--color-hud)]'
+                  ? 'bg-gradient-to-t from-hud-deep to-hud-bright'
                   : 'bg-gradient-to-t from-hud-deep/40 to-hud/60 group-hover:to-hud',
               )}
               initial={{ height: 0 }}
@@ -262,7 +262,7 @@ export function AdminDashboard() {
               ).map(([label, count, tone]) => (
                 <div
                   key={label}
-                  className="flex items-center justify-between rounded-[3px] border border-hud/10 bg-white/[0.02] px-2.5 py-2"
+                  className="flex items-center justify-between rounded-[8px] border border-hud/10 bg-white/[0.02] px-2.5 py-2"
                 >
                   <span className="flex items-center gap-1.5">
                     <StatusIndicator tone={tone} />
@@ -297,7 +297,7 @@ export function AdminDashboard() {
             {recentLogs.map((log) => (
               <li
                 key={log.id}
-                className="flex items-start gap-3 rounded-[3px] px-2.5 py-2 transition-colors duration-150 hover:bg-hud/[0.05]"
+                className="flex items-start gap-3 rounded-[8px] px-2.5 py-2 transition-colors duration-150 hover:bg-hud/[0.05]"
               >
                 <span className="mt-0.5 shrink-0 font-mono text-[10px] text-ink-faint tnum">
                   {new Date(log.at).toLocaleTimeString('pt-BR', {
@@ -330,7 +330,7 @@ export function AdminDashboard() {
         >
           <ul className="flex flex-col gap-1.5">
             {openTickets.length === 0 && (
-              <li className="rounded-[3px] border border-dashed border-hud/10 px-3 py-6 text-center text-[11.5px] text-ink-faint">
+              <li className="rounded-[8px] border border-dashed border-hud/10 px-3 py-6 text-center text-[11.5px] text-ink-faint">
                 Nenhum chamado esperando resposta.
               </li>
             )}
@@ -339,7 +339,7 @@ export function AdminDashboard() {
               return (
                 <li
                   key={t.id}
-                  className="flex items-center gap-3 rounded-[3px] border border-hud/10 bg-white/[0.015] px-3 py-2.5 transition-colors duration-150 hover:border-hud/30"
+                  className="flex items-center gap-3 rounded-[8px] border border-hud/10 bg-white/[0.015] px-3 py-2.5 transition-colors duration-150 hover:border-hud/30"
                 >
                   <div className="min-w-0 flex-1">
                     <div className="truncate text-[12px] text-ink">{t.subject}</div>
@@ -364,7 +364,7 @@ export function AdminDashboard() {
       >
         <Link
           to="/admin/companies"
-          className="group flex items-center gap-2 rounded-[3px] border border-hud/30 bg-hud/[0.06] px-5 py-2.5 font-mono text-[10px] uppercase tracking-[0.18em] text-hud transition-all duration-200 hover:border-hud/60 hover:bg-hud/12"
+          className="group flex items-center gap-2 rounded-[8px] border border-hud/30 bg-hud/[0.06] px-5 py-2.5 font-mono text-[10px] uppercase tracking-[0.18em] text-hud transition-all duration-200 hover:border-hud/60 hover:bg-hud/12"
         >
           <Building2 size={13} />
           Gerenciar empresas

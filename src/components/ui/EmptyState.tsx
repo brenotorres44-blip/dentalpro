@@ -20,7 +20,7 @@ export function EmptyState({
 }) {
   return (
     <div className="flex min-h-[200px] flex-col items-center justify-center gap-3 px-6 py-10 text-center">
-      <span className="grid h-11 w-11 place-items-center rounded-[4px] border border-hud/20 bg-hud/[0.05] text-hud/70">
+      <span className="grid h-11 w-11 place-items-center rounded-[9px] border border-hud/20 bg-hud/[0.05] text-hud/70">
         <Icon size={20} strokeWidth={1.4} />
       </span>
       <div>

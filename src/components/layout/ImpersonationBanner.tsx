@@ -47,7 +47,7 @@ export function ImpersonationBanner() {
         // declarativa no AppLayout. Navegar aqui competiria com a troca de
         // sessão no mesmo clique.
         onClick={exitCompany}
-        className="flex shrink-0 items-center gap-1.5 rounded-[3px] border px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-opacity duration-200 hover:opacity-80"
+        className="flex shrink-0 items-center gap-1.5 rounded-[8px] border px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-opacity duration-200 hover:opacity-80"
         style={{ borderColor: '#a78bfa66', color: '#ddd6fe', background: '#a78bfa1a' }}
       >
         <X size={11} />

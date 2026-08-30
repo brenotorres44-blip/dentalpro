@@ -45,10 +45,7 @@ export function BootOverlay({ label, sub }: { label: string; sub: string }) {
                 strokeDasharray={2 * Math.PI * 58}
                 strokeDashoffset={2 * Math.PI * 58 * (1 - progress)}
                 transform="rotate(-90 66 66)"
-                style={{
-                  transition: 'stroke-dashoffset 260ms cubic-bezier(.22,1,.36,1)',
-                  filter: 'drop-shadow(0 0 8px var(--color-hud))',
-                }}
+                style={{ transition: 'stroke-dashoffset 260ms cubic-bezier(.22,1,.36,1)' }}
               />
               {theme.effects.chrome >= 0.5 && (
                 <circle

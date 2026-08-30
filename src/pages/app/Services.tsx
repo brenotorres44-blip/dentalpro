@@ -158,7 +158,7 @@ export function Services() {
         <div className="flex items-center gap-2.5">
           <span
             className={cn(
-              'grid h-7 w-7 shrink-0 place-items-center rounded-[2px] border',
+              'grid h-7 w-7 shrink-0 place-items-center rounded-[8px] border',
               s.active ? 'border-hud/25 bg-hud/[0.08] text-hud' : 'border-stroke/60 text-ink-faint',
             )}
           >
@@ -418,7 +418,7 @@ function ServiceForm({
 
       {/* ---------- composição do combo ---------- */}
       {draft.category === 'combo' && (
-        <section className="flex flex-col gap-2 rounded-[3px] border border-hud/12 bg-white/[0.015] p-3">
+        <section className="flex flex-col gap-2 rounded-[8px] border border-hud/12 bg-white/[0.015] p-3">
           <span className="tech-label">PROCEDIMENTOS INCLUSOS</span>
           <div className="flex flex-wrap gap-1.5">
             {comboParts.map((part) => {
@@ -436,7 +436,7 @@ function ServiceForm({
                     )
                   }
                   className={cn(
-                    'rounded-[3px] border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.1em] transition-all duration-200',
+                    'rounded-[8px] border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.1em] transition-all duration-200',
                     selected
                       ? 'border-hud/50 bg-hud/12 text-hud'
                       : 'border-stroke/60 text-ink-faint hover:border-hud/30',
@@ -464,7 +464,7 @@ function ServiceForm({
       )}
 
       {/* ---------- preço por profissional ---------- */}
-      <section className="flex flex-col gap-3 rounded-[3px] border border-hud/12 bg-white/[0.015] p-3">
+      <section className="flex flex-col gap-3 rounded-[8px] border border-hud/12 bg-white/[0.015] p-3">
         <div>
           <span className="tech-label">PREÇO POR PROFISSIONAL</span>
           <p className="mt-1 text-[11px] leading-relaxed text-ink-faint">

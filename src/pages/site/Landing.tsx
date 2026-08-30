@@ -92,25 +92,22 @@ function Nav() {
     <header className="sticky top-0 z-30 border-b border-hud/10 bg-void/70 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5">
         <Link to="/" className="flex items-center gap-2.5">
-          <span className="relative grid h-8 w-8 place-items-center">
-            <span className="absolute inset-0 rotate-45 rounded-[3px] border border-hud/60 shadow-[0_0_16px_-4px_var(--color-hud)]" />
-            <span className="relative font-display text-[11px] font-bold text-hud">P</span>
+          <span className="grid h-8 w-8 place-items-center rounded-full bg-hud/12 font-display text-[12px] font-bold text-hud">
+            P
           </span>
-          <span className="font-display text-[13px] font-bold tracking-[0.28em] text-ink">
-            PRODENT
-          </span>
+          <span className="font-display text-[14px] font-bold text-ink">PRODENT</span>
         </Link>
 
         <div className="flex items-center gap-2">
           <Link
             to="/login"
-            className="rounded-[3px] border border-stroke/70 px-3.5 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-ink-dim transition-all duration-200 hover:border-hud/50 hover:text-hud"
+            className="rounded-[8px] border border-stroke/70 px-3.5 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-ink-dim transition-all duration-200 hover:border-hud/50 hover:text-hud"
           >
             Entrar
           </Link>
           <Link
             to="/register"
-            className="rounded-[3px] border border-hud/50 bg-hud/12 px-3.5 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-hud transition-all duration-200 hover:bg-hud/20 hover:shadow-[0_0_22px_-8px_var(--color-hud)]"
+            className="rounded-[8px] border border-hud/50 bg-hud/12 px-3.5 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-hud transition-all duration-200 hover:bg-hud/20"
           >
             Testar grátis
           </Link>
@@ -150,7 +147,7 @@ function Hero() {
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link
             to="/register"
-            className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-[3px] border border-hud/50 bg-hud/12 px-6 py-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-hud transition-all duration-200 hover:bg-hud/20 hover:shadow-[0_0_34px_-10px_var(--color-hud)] sm:w-auto"
+            className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-[8px] border border-hud/50 bg-hud/12 px-6 py-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-hud transition-all duration-200 hover:bg-hud/20 hover: sm:w-auto"
           >
             <Sweep />
             <span className="relative">Testar 14 dias grátis</span>
@@ -158,7 +155,7 @@ function Hero() {
           </Link>
           <Link
             to="/login"
-            className="flex w-full items-center justify-center gap-2 rounded-[3px] border border-stroke/70 px-6 py-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-ink-dim transition-all duration-200 hover:border-hud/40 hover:text-ink sm:w-auto"
+            className="flex w-full items-center justify-center gap-2 rounded-[8px] border border-stroke/70 px-6 py-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-ink-dim transition-all duration-200 hover:border-hud/40 hover:text-ink sm:w-auto"
           >
             Já tenho conta
           </Link>
@@ -194,7 +191,7 @@ function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5 + i * 0.08 }}
-              className="rounded-[3px] border border-hud/12 bg-white/[0.02] p-3"
+              className="rounded-[8px] border border-hud/12 bg-white/[0.02] p-3"
             >
               <div className="tech-label">{c.label}</div>
               <div className={cn('mt-1.5 font-display text-[19px] font-semibold tnum', c.tone)}>
@@ -205,7 +202,7 @@ function Hero() {
         </div>
 
         {/* silhueta de gráfico */}
-        <div className="mt-3 h-28 rounded-[3px] border border-hud/12 bg-white/[0.015] p-3">
+        <div className="mt-3 h-28 rounded-[8px] border border-hud/12 bg-white/[0.015] p-3">
           <svg viewBox="0 0 300 80" preserveAspectRatio="none" className="h-full w-full">
             <defs>
               <linearGradient id="landing-fill" x1="0" y1="0" x2="0" y2="1">
@@ -275,10 +272,10 @@ function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.4, delay: (i % 3) * 0.08 }}
-              className="holo-panel group relative p-5 transition-all duration-300 hover:border-hud/40 hover:shadow-[0_0_36px_-16px_var(--color-hud)]"
+              className="holo-panel group relative p-5 transition-all duration-300 hover:border-hud/40"
             >
               <CornerBrackets tone="faint" />
-              <span className="grid h-10 w-10 place-items-center rounded-[3px] border border-hud/25 bg-hud/[0.06] text-hud transition-transform duration-200 group-hover:scale-105">
+              <span className="grid h-10 w-10 place-items-center rounded-[8px] border border-hud/25 bg-hud/[0.06] text-hud transition-transform duration-200 group-hover:scale-105">
                 <Icon size={18} strokeWidth={1.5} />
               </span>
               <h3 className="mt-4 font-display text-[14px] font-semibold text-ink">{f.title}</h3>
@@ -302,7 +299,7 @@ function Benefits() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: i * 0.07 }}
-            className="flex items-center gap-3 rounded-[3px] border border-hud/12 bg-white/[0.02] px-4 py-3.5"
+            className="flex items-center gap-3 rounded-[8px] border border-hud/12 bg-white/[0.02] px-4 py-3.5"
           >
             <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full border border-success/40 text-success">
               <Check size={12} />
@@ -334,7 +331,7 @@ function Pricing() {
               transition={{ duration: 0.4, delay: i * 0.1 }}
               className={cn(
                 'holo-panel relative flex flex-col p-6',
-                featured && 'border-hud/45 shadow-[0_0_44px_-18px_var(--color-hud)]',
+                featured && 'border-hud/45',
               )}
             >
               <CornerBrackets tone={featured ? 'hud' : 'faint'} />
@@ -380,7 +377,7 @@ function Pricing() {
                 to="/register"
                 state={{ planId: plan.id }}
                 className={cn(
-                  'mt-6 rounded-[3px] border py-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] transition-all duration-200',
+                  'mt-6 rounded-[8px] border py-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] transition-all duration-200',
                   featured
                     ? 'border-hud/50 bg-hud/12 text-hud hover:bg-hud/20'
                     : 'border-stroke/70 text-ink-dim hover:border-hud/40 hover:text-hud',
@@ -466,7 +463,7 @@ function Footer() {
 
         <Link
           to="/register"
-          className="flex items-center gap-2 rounded-[3px] border border-hud/50 bg-hud/12 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-hud transition-all duration-200 hover:bg-hud/20"
+          className="flex items-center gap-2 rounded-[8px] border border-hud/50 bg-hud/12 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-hud transition-all duration-200 hover:bg-hud/20"
         >
           Criar minha clínica
           <ArrowRight size={13} />

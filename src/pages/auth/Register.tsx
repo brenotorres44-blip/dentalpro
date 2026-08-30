@@ -228,9 +228,9 @@ export function Register() {
                 <motion.span
                   animate={{ scale: state === 'active' ? 1.08 : 1 }}
                   className={cn(
-                    'grid h-9 w-9 place-items-center rounded-[3px] border transition-colors duration-300',
+                    'grid h-9 w-9 place-items-center rounded-[8px] border transition-colors duration-300',
                     state === 'done' && 'border-success/50 bg-success/10 text-success',
-                    state === 'active' && 'border-hud/60 bg-hud/12 text-hud shadow-[0_0_20px_-6px_var(--color-hud)]',
+                    state === 'active' && 'border-hud/60 bg-hud/12 text-hud',
                     state === 'todo' && 'border-stroke/60 text-ink-faint',
                   )}
                 >
@@ -248,7 +248,7 @@ export function Register() {
               {i < STEPS.length - 1 && (
                 <span className="mx-2 h-px flex-1 bg-stroke/60">
                   <motion.span
-                    className="block h-px bg-hud shadow-[0_0_8px_var(--color-hud)]"
+                    className="block h-px bg-hud"
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: i < step ? 1 : 0 }}
                     style={{ transformOrigin: 'left' }}
@@ -298,7 +298,7 @@ export function Register() {
 
             {step === 2 && (
               <div className="flex flex-col gap-5">
-                <Field label="Nome exibido no sistema" value={form.displayName} onChange={(e) => set('displayName', e.target.value)} placeholder={form.companyName || 'CLÍNICA ELITE'} hint="É o que aparece no topo do painel" />
+                <Field label="Nome exibido no sistema" value={form.displayName} onChange={(e) => set('displayName', e.target.value)} placeholder={form.companyName || 'Clínica Sorriso'} hint="É o que aparece no topo do painel" />
 
                 <div className="flex flex-col gap-2">
                   <span className="tech-label">Tema visual</span>
@@ -313,7 +313,7 @@ export function Register() {
                           setBaseTheme(t.id);
                         }}
                         className={cn(
-                          'flex items-center gap-3 rounded-[3px] border px-3 py-2.5 text-left transition-all duration-200',
+                          'flex items-center gap-3 rounded-[8px] border px-3 py-2.5 text-left transition-all duration-200',
                           form.themeId === t.id
                             ? 'border-hud/60 bg-hud/[0.08]'
                             : 'border-stroke/60 hover:border-hud/35',
@@ -347,9 +347,9 @@ export function Register() {
                       type="button"
                       onClick={() => set('planId', plan.id)}
                       className={cn(
-                        'flex flex-col gap-3 rounded-[3px] border p-4 text-left transition-all duration-200',
+                        'flex flex-col gap-3 rounded-[8px] border p-4 text-left transition-all duration-200',
                         selected
-                          ? 'border-hud/60 bg-hud/[0.08] shadow-[0_0_28px_-14px_var(--color-hud)]'
+                          ? 'border-hud/60 bg-hud/[0.08]'
                           : 'border-stroke/60 hover:border-hud/35',
                       )}
                     >
@@ -389,7 +389,7 @@ export function Register() {
             type="button"
             disabled={submitting}
             onClick={() => (step === 0 ? navigate('/login') : setStep((s) => s - 1))}
-            className="flex items-center gap-2 rounded-[3px] border border-stroke/70 px-3.5 py-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-ink-dim transition-all duration-200 hover:border-hud/40 hover:text-ink disabled:opacity-40"
+            className="flex items-center gap-2 rounded-[8px] border border-stroke/70 px-3.5 py-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-ink-dim transition-all duration-200 hover:border-hud/40 hover:text-ink disabled:opacity-40"
           >
             <ArrowLeft size={12} />
             {step === 0 ? 'Cancelar' : 'Voltar'}
@@ -401,7 +401,7 @@ export function Register() {
             // Sem isto, um duplo clique dispara dois `signUp` e o segundo falha
             // com "e-mail já registrado" — parecendo erro de quem se cadastrou.
             disabled={submitting}
-            className="group flex items-center gap-2 rounded-[3px] border border-hud/50 bg-hud/12 px-5 py-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-hud transition-all duration-200 hover:bg-hud/20 hover:shadow-[0_0_24px_-8px_var(--color-hud)] disabled:pointer-events-none disabled:opacity-50"
+            className="group flex items-center gap-2 rounded-[8px] border border-hud/50 bg-hud/12 px-5 py-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-hud transition-all duration-200 hover:bg-hud/20 hover: disabled:pointer-events-none disabled:opacity-50"
           >
             {submitting
               ? 'Criando…'
@@ -500,7 +500,7 @@ function EnvironmentReady({
         </div>
 
         <div>
-          <span className="inline-flex items-center gap-2 rounded-[3px] border border-success/40 bg-success/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-success">
+          <span className="inline-flex items-center gap-2 rounded-[8px] border border-success/40 bg-success/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-success">
             <Check size={12} />
             Ambiente criado
           </span>

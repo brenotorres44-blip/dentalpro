@@ -65,11 +65,9 @@ export function Sidebar({
         />
 
         <div className="flex h-16 shrink-0 items-center gap-3 border-b border-hud/12 px-5 md:justify-center md:px-0 lg:justify-start lg:px-5">
-          <div className="relative grid h-8 w-8 shrink-0 place-items-center">
-            <span className="absolute inset-0 rotate-45 rounded-[3px] border border-hud/60 shadow-[0_0_16px_-4px_var(--color-hud)]" />
-            <span className="absolute inset-1.5 rotate-45 rounded-[2px] bg-hud/20" />
-            <span className="relative font-display text-[11px] font-bold text-hud">{brandMark}</span>
-          </div>
+          <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-hud/12 font-display text-[12px] font-bold text-hud">
+            {brandMark}
+          </span>
           <div className="min-w-0 md:hidden lg:block">
             <div className="truncate font-display text-[12px] font-semibold tracking-[0.24em] text-ink">
               {brandName}
@@ -101,7 +99,7 @@ export function Sidebar({
                     onClick={onCloseMobile}
                     className={({ isActive }) =>
                       cn(
-                        'group relative flex items-center gap-3 rounded-[3px] px-3 py-2.5',
+                        'group relative flex items-center gap-3 rounded-[8px] px-3 py-2.5',
                         'transition-all duration-200 ease-out',
                         'md:justify-center md:px-0 lg:justify-start lg:px-3',
                         isActive
@@ -115,14 +113,14 @@ export function Sidebar({
                         {isActive && (
                           <motion.span
                             layoutId="nav-active"
-                            className="absolute inset-y-1 left-0 w-[2px] rounded-full bg-hud shadow-[0_0_12px_1px_var(--color-hud)]"
+                            className="absolute inset-y-1 left-0 w-[2px] rounded-full bg-hud"
                             transition={{ type: 'spring', stiffness: 420, damping: 34 }}
                           />
                         )}
 
                         <span
                           className={cn(
-                            'pointer-events-none absolute inset-0 rounded-[3px] border transition-colors duration-200',
+                            'pointer-events-none absolute inset-0 rounded-[8px] border transition-colors duration-200',
                             isActive ? 'border-hud/30' : 'border-transparent group-hover:border-hud/20',
                           )}
                           aria-hidden
@@ -130,10 +128,7 @@ export function Sidebar({
 
                         <Icon
                           size={17}
-                          className={cn(
-                            'shrink-0 transition-transform duration-200 group-hover:scale-110',
-                            isActive && 'drop-shadow-[0_0_6px_var(--color-hud)]',
-                          )}
+                          className="shrink-0 transition-transform duration-200 group-hover:scale-110"
                         />
                         <span className="truncate text-[13px] font-medium md:hidden lg:inline">
                           {item.label}

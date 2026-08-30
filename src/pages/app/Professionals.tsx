@@ -379,7 +379,7 @@ function ProfessionalForm({
               formatBRL(performance.serviceCommissionCents + performance.productCommissionCents),
             ],
           ].map(([label, value]) => (
-            <div key={label} className="rounded-[3px] border border-hud/10 bg-white/[0.02] px-2.5 py-2">
+            <div key={label} className="rounded-[8px] border border-hud/10 bg-white/[0.02] px-2.5 py-2">
               <div className="tech-label">{label}</div>
               <div className="mt-1 truncate font-mono text-[11.5px] text-ink tnum">{value}</div>
             </div>
@@ -438,7 +438,7 @@ function ProfessionalForm({
       />
 
       {/* ---------- comissões ---------- */}
-      <section className="flex flex-col gap-3 rounded-[3px] border border-hud/12 bg-white/[0.015] p-3">
+      <section className="flex flex-col gap-3 rounded-[8px] border border-hud/12 bg-white/[0.015] p-3">
         <span className="tech-label">COMISSÕES</span>
         <div className="grid grid-cols-2 gap-3">
           <Field
@@ -469,7 +469,7 @@ function ProfessionalForm({
       </section>
 
       {/* ---------- jornada ---------- */}
-      <section className="flex flex-col gap-2 rounded-[3px] border border-hud/12 bg-white/[0.015] p-3">
+      <section className="flex flex-col gap-2 rounded-[8px] border border-hud/12 bg-white/[0.015] p-3">
         <div className="flex items-center gap-2">
           <CalendarRange size={13} className="text-hud/70" />
           <span className="tech-label">JORNADA SEMANAL</span>
@@ -490,7 +490,7 @@ function ProfessionalForm({
                 type="button"
                 onClick={() => setDay(index, shift ? null : { ...DEFAULT_SHIFT })}
                 className={cn(
-                  'rounded-[3px] border px-2 py-1 font-mono text-[9px] uppercase tracking-[0.14em] transition-colors duration-200',
+                  'rounded-[8px] border px-2 py-1 font-mono text-[9px] uppercase tracking-[0.14em] transition-colors duration-200',
                   shift
                     ? 'border-hud/40 bg-hud/10 text-hud'
                     : 'border-stroke/60 text-ink-faint hover:border-hud/30',
@@ -523,7 +523,7 @@ function ProfessionalForm({
                         else delete next[key];
                         setDay(index, next);
                       }}
-                      className="w-full rounded-[3px] border border-stroke/70 bg-void/50 px-1.5 py-1.5 text-center font-mono text-[11px] text-ink outline-none transition-colors focus:border-hud/60 tnum"
+                      className="w-full rounded-[8px] border border-stroke/70 bg-void/50 px-1.5 py-1.5 text-center font-mono text-[11px] text-ink outline-none transition-colors focus:border-hud/60 tnum"
                     />
                   </label>
                 ))}
@@ -548,7 +548,7 @@ function ProfessionalForm({
       </section>
 
       {/* ---------- serviços executados ---------- */}
-      <section className="flex flex-col gap-2 rounded-[3px] border border-hud/12 bg-white/[0.015] p-3">
+      <section className="flex flex-col gap-2 rounded-[8px] border border-hud/12 bg-white/[0.015] p-3">
         <span className="tech-label">SERVIÇOS QUE EXECUTA</span>
         <p className="text-[11px] leading-relaxed text-ink-faint">
           Nenhum marcado significa <strong>todos</strong> — é o caso comum, e obrigar a marcar oito
@@ -570,7 +570,7 @@ function ProfessionalForm({
                   )
                 }
                 className={cn(
-                  'rounded-[3px] border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.1em] transition-all duration-200',
+                  'rounded-[8px] border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.1em] transition-all duration-200',
                   selected
                     ? 'border-hud/50 bg-hud/12 text-hud'
                     : 'border-stroke/60 text-ink-faint hover:border-hud/30',

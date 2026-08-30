@@ -214,7 +214,7 @@ export function PlatformSettings() {
           {services.map((s) => (
             <div
               key={s.label}
-              className="flex items-start gap-3 rounded-[3px] border border-hud/12 bg-white/[0.02] p-3"
+              className="flex items-start gap-3 rounded-[8px] border border-hud/12 bg-white/[0.02] p-3"
             >
               <span className="mt-1">
                 <StatusIndicator tone={s.status} pulse={s.status === 'ok'} />
@@ -238,7 +238,7 @@ export function PlatformSettings() {
           <ul className="flex flex-col gap-2.5">
             {TENANCY_RULES.map((rule) => (
               <li key={rule} className="flex items-start gap-2.5">
-                <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-hud shadow-[0_0_6px_var(--color-hud)]" />
+                <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-hud" />
                 <span className="text-[12.5px] leading-relaxed text-ink-dim">{rule}</span>
               </li>
             ))}
@@ -253,7 +253,7 @@ export function PlatformSettings() {
               ['USUÁRIOS', num(metrics.users)],
               ['TICKETS ABERTOS', num(metrics.openTickets)],
             ].map(([label, value]) => (
-              <div key={label} className="rounded-[3px] border border-hud/12 bg-white/[0.02] px-3 py-2.5">
+              <div key={label} className="rounded-[8px] border border-hud/12 bg-white/[0.02] px-3 py-2.5">
                 <dt className="tech-label">{label}</dt>
                 <dd className="mt-1 font-display text-[17px] font-semibold text-hud tnum">{value}</dd>
               </div>
@@ -261,7 +261,7 @@ export function PlatformSettings() {
           </dl>
 
           {!isSupabaseConfigured && (
-            <div className="mt-4 flex items-start gap-3 rounded-[3px] border border-warn/25 bg-warn/[0.06] p-3">
+            <div className="mt-4 flex items-start gap-3 rounded-[8px] border border-warn/25 bg-warn/[0.06] p-3">
               <KeyRound size={14} className="mt-0.5 shrink-0 text-warn" />
               <p className="text-[11.5px] leading-relaxed text-ink-dim">
                 Sem <code className="font-mono text-warn">.env.local</code>, estes números vêm de
@@ -277,7 +277,7 @@ export function PlatformSettings() {
         <ol className="flex flex-col gap-2">
           {NEXT_STEPS.map((step, i) => (
             <li key={step} className="flex items-start gap-3">
-              <span className="grid h-5 w-5 shrink-0 place-items-center rounded-[2px] border border-hud/30 bg-hud/[0.08] font-mono text-[10px] text-hud tnum">
+              <span className="grid h-5 w-5 shrink-0 place-items-center rounded-[8px] border border-hud/30 bg-hud/[0.08] font-mono text-[10px] text-hud tnum">
                 {i + 1}
               </span>
               <span className="text-[12.5px] leading-relaxed text-ink-dim">{step}</span>

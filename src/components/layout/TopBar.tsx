@@ -42,7 +42,7 @@ export function TopBar({
       <div className="flex min-w-0 items-center gap-3">
         <button
           onClick={onOpenMenu}
-          className="grid h-9 w-9 shrink-0 place-items-center rounded-[3px] border border-hud/25 text-hud transition-colors hover:bg-hud/10 md:hidden"
+          className="grid h-9 w-9 shrink-0 place-items-center rounded-[8px] border border-hud/25 text-hud transition-colors hover:bg-hud/10 md:hidden"
           aria-label="Abrir menu"
         >
           <Menu size={16} />
@@ -58,7 +58,7 @@ export function TopBar({
 
       <div className="flex shrink-0 items-center gap-3 sm:gap-4">
         <button
-          className="relative grid h-9 w-9 place-items-center rounded-[3px] border border-stroke/60 text-ink-dim transition-all duration-200 hover:border-hud/50 hover:text-hud"
+          className="relative grid h-9 w-9 place-items-center rounded-[8px] border border-stroke/60 text-ink-dim transition-all duration-200 hover:border-hud/50 hover:text-hud"
           aria-label="Notificações — 2 não lidas"
         >
           <Bell size={15} />
@@ -84,11 +84,11 @@ export function TopBar({
           <div className="relative">
             <button
               onClick={() => setMenuOpen((v) => !v)}
-              className="flex items-center gap-2 rounded-[3px] border border-hud/20 bg-hud/[0.05] py-1 pl-1 pr-2 transition-colors duration-200 hover:border-hud/50"
+              className="flex items-center gap-2 rounded-[8px] border border-hud/20 bg-hud/[0.05] py-1 pl-1 pr-2 transition-colors duration-200 hover:border-hud/50"
               aria-haspopup="menu"
               aria-expanded={menuOpen}
             >
-              <span className="grid h-7 w-7 place-items-center rounded-[2px] bg-hud/15 font-display text-[10px] font-semibold text-hud">
+              <span className="grid h-7 w-7 place-items-center rounded-[8px] bg-hud/15 font-display text-[10px] font-semibold text-hud">
                 {initials(session.user.name)}
               </span>
               <span className="hidden text-left lg:block">
@@ -119,7 +119,7 @@ export function TopBar({
                     </div>
                     <button
                       onClick={logout}
-                      className="flex w-full items-center gap-2 rounded-[2px] px-3 py-2.5 text-left text-[12px] text-ink-dim transition-colors hover:bg-critical/10 hover:text-critical"
+                      className="flex w-full items-center gap-2 rounded-[8px] px-3 py-2.5 text-left text-[12px] text-ink-dim transition-colors hover:bg-critical/10 hover:text-critical"
                       role="menuitem"
                     >
                       <LogOut size={13} />

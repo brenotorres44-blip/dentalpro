@@ -136,7 +136,7 @@ export function AppointmentForm({
         <span className="tech-label">PACIENTE</span>
 
         {selectedClient ? (
-          <div className="flex items-center gap-2.5 rounded-[3px] border border-hud/30 bg-hud/[0.06] px-3 py-2.5">
+          <div className="flex items-center gap-2.5 rounded-[8px] border border-hud/30 bg-hud/[0.06] px-3 py-2.5">
             <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full border border-hud/30 bg-hud/10 font-display text-[10px] font-semibold text-hud">
               {initials(selectedClient.name)}
             </span>
@@ -171,7 +171,7 @@ export function AppointmentForm({
                 value={clientQuery}
                 onChange={(e) => setClientQuery(e.target.value)}
                 placeholder="Buscar por nome ou telefone"
-                className="w-full rounded-[3px] border border-stroke/70 bg-void/50 py-2.5 pl-9 pr-3 text-[12.5px] text-ink outline-none transition-all placeholder:text-ink-faint/60 focus:border-hud/60 focus:bg-hud/[0.04]"
+                className="w-full rounded-[8px] border border-stroke/70 bg-void/50 py-2.5 pl-9 pr-3 text-[12.5px] text-ink outline-none transition-all placeholder:text-ink-faint/60 focus:border-hud/60 focus:bg-hud/[0.04]"
               />
             </label>
 
@@ -185,7 +185,7 @@ export function AppointmentForm({
                         set('clientId', c.id);
                         setClientQuery('');
                       }}
-                      className="flex w-full items-center gap-2.5 rounded-[3px] border border-stroke/60 px-3 py-2 text-left transition-colors hover:border-hud/40 hover:bg-hud/[0.05]"
+                      className="flex w-full items-center gap-2.5 rounded-[8px] border border-stroke/60 px-3 py-2 text-left transition-colors hover:border-hud/40 hover:bg-hud/[0.05]"
                     >
                       <UserRound size={13} className="shrink-0 text-ink-faint" />
                       <span className="min-w-0 flex-1 truncate text-[12px] text-ink-dim">{c.name}</span>
@@ -237,7 +237,7 @@ export function AppointmentForm({
                     )
                   }
                   className={cn(
-                    'flex items-center gap-1.5 rounded-[3px] border px-2 py-1.5 font-mono text-[10px] uppercase tracking-[0.1em] transition-all duration-200',
+                    'flex items-center gap-1.5 rounded-[8px] border px-2 py-1.5 font-mono text-[10px] uppercase tracking-[0.1em] transition-all duration-200',
                     selected
                       ? 'border-hud/50 bg-hud/12 text-hud'
                       : 'border-stroke/60 text-ink-faint hover:border-hud/30',
@@ -262,7 +262,7 @@ export function AppointmentForm({
               setTargetDate(e.target.value);
               setError(null);
             }}
-            className="w-full rounded-[3px] border border-stroke/70 bg-void/50 px-3 py-2.5 font-mono text-[12.5px] text-ink outline-none transition-colors focus:border-hud/60 tnum"
+            className="w-full rounded-[8px] border border-stroke/70 bg-void/50 px-3 py-2.5 font-mono text-[12.5px] text-ink outline-none transition-colors focus:border-hud/60 tnum"
           />
         </label>
 
@@ -273,7 +273,7 @@ export function AppointmentForm({
             step={300}
             value={draft.time}
             onChange={(e) => set('time', e.target.value)}
-            className="w-full rounded-[3px] border border-stroke/70 bg-void/50 px-3 py-2.5 font-mono text-[12.5px] text-ink outline-none transition-colors focus:border-hud/60 tnum"
+            className="w-full rounded-[8px] border border-stroke/70 bg-void/50 px-3 py-2.5 font-mono text-[12.5px] text-ink outline-none transition-colors focus:border-hud/60 tnum"
           />
         </label>
       </div>
@@ -353,7 +353,7 @@ export function AppointmentForm({
 
         {appointment && (
           <div className="flex flex-col gap-2">
-            <div className="flex items-center justify-between gap-2 rounded-[3px] border border-hud/10 bg-white/[0.02] px-3 py-2">
+            <div className="flex items-center justify-between gap-2 rounded-[8px] border border-hud/10 bg-white/[0.02] px-3 py-2">
               <span className="tech-label">REGISTRO</span>
               <Badge tone={appointment.status === 'concluido' ? 'ok' : 'live'}>
                 {appointment.services.join(' + ')}

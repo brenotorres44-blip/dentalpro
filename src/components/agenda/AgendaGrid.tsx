@@ -188,7 +188,7 @@ export function AgendaGrid({
                   <div
                     key={block.id}
                     style={{ top, height }}
-                    className="pointer-events-none absolute inset-x-1 flex items-center gap-1.5 overflow-hidden rounded-[3px] border border-dashed border-ink-faint/40 bg-void/70 px-2"
+                    className="pointer-events-none absolute inset-x-1 flex items-center gap-1.5 overflow-hidden rounded-[8px] border border-dashed border-ink-faint/40 bg-void/70 px-2"
                     title={block.reason}
                   >
                     <Lock size={11} className="shrink-0 text-ink-faint" />
@@ -222,7 +222,7 @@ export function AgendaGrid({
                       onClick={() => onSelect(a)}
                       style={{ top, height }}
                       className={cn(
-                        'absolute inset-x-1 flex flex-col justify-start gap-0.5 overflow-hidden rounded-[3px] border px-2 py-1 text-left',
+                        'absolute inset-x-1 flex flex-col justify-start gap-0.5 overflow-hidden rounded-[8px] border px-2 py-1 text-left',
                         'transition-transform duration-150 hover:z-20 hover:scale-[1.02]',
                         STATUS_STYLE[a.status],
                         dragging === a.id && 'opacity-40',

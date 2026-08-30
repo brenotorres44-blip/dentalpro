@@ -170,7 +170,7 @@ export function Products() {
         <div className="flex items-center gap-2.5">
           <span
             className={cn(
-              'grid h-7 w-7 shrink-0 place-items-center rounded-[2px] border',
+              'grid h-7 w-7 shrink-0 place-items-center rounded-[8px] border',
               isCritical(p)
                 ? 'border-critical/35 bg-critical/10 text-critical'
                 : 'border-hud/20 bg-hud/[0.06] text-hud',
@@ -260,7 +260,7 @@ export function Products() {
             e.stopPropagation();
             setMoving(p);
           }}
-          className="grid h-7 w-7 place-items-center rounded-[2px] border border-transparent text-ink-faint transition-all duration-150 hover:border-hud/40 hover:text-hud"
+          className="grid h-7 w-7 place-items-center rounded-[8px] border border-transparent text-ink-faint transition-all duration-150 hover:border-hud/40 hover:text-hud"
           aria-label={`Movimentar ${p.name}`}
         >
           <ArrowDownUp size={14} />
@@ -630,7 +630,7 @@ function MovementForm({
             {history.map((m) => (
               <li
                 key={m.id}
-                className="flex items-center gap-2.5 rounded-[3px] border border-hud/[0.09] bg-white/[0.015] px-2.5 py-2"
+                className="flex items-center gap-2.5 rounded-[8px] border border-hud/[0.09] bg-white/[0.015] px-2.5 py-2"
               >
                 <Badge
                   tone={

@@ -12,10 +12,10 @@ const FILL: Record<Tone, string> = {
 };
 
 const GLOW: Record<Tone, string> = {
-  hud: 'shadow-[0_0_14px_-2px_var(--color-hud)]',
-  critical: 'shadow-[0_0_14px_-2px_var(--color-critical)]',
-  warn: 'shadow-[0_0_14px_-2px_var(--color-warn)]',
-  success: 'shadow-[0_0_14px_-2px_var(--color-success)]',
+  hud: '',
+  critical: '',
+  warn: '',
+  success: '',
 };
 
 /**

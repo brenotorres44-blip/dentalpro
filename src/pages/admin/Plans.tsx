@@ -83,7 +83,7 @@ function PlanCard({ plan, inUse, featured }: { plan: Plan; inUse: number; featur
   return (
     <div
       className={cn(
-        'flex flex-col gap-4 rounded-[3px] border p-4',
+        'flex flex-col gap-4 rounded-[8px] border p-4',
         featured ? 'border-hud/40 bg-hud/[0.04]' : 'border-hud/12 bg-white/[0.02]',
       )}
     >
@@ -94,7 +94,7 @@ function PlanCard({ plan, inUse, featured }: { plan: Plan; inUse: number; featur
           </h3>
           <p className="mt-1 text-[11px] leading-snug text-ink-faint">{plan.tagline}</p>
         </div>
-        <span className="shrink-0 rounded-[2px] border border-hud/25 bg-hud/[0.08] px-2 py-1 font-mono text-[9.5px] text-hud tnum">
+        <span className="shrink-0 rounded-[8px] border border-hud/25 bg-hud/[0.08] px-2 py-1 font-mono text-[9.5px] text-hud tnum">
           {inUse} empresas
         </span>
       </header>
@@ -109,7 +109,7 @@ function PlanCard({ plan, inUse, featured }: { plan: Plan; inUse: number; featur
             value={preco}
             onChange={(e) => setPreco(e.target.value)}
             className={cn(
-              'w-full rounded-[3px] border bg-void/50 px-2.5 py-2 font-mono text-[13px] outline-none transition-colors tnum',
+              'w-full rounded-[8px] border bg-void/50 px-2.5 py-2 font-mono text-[13px] outline-none transition-colors tnum',
               precoValido
                 ? 'border-stroke/70 text-hud focus:border-hud/60'
                 : 'border-critical/60 text-critical',
@@ -131,7 +131,7 @@ function PlanCard({ plan, inUse, featured }: { plan: Plan; inUse: number; featur
       */}
       <p
         className={cn(
-          'rounded-[2px] border px-2 py-1.5 font-mono text-[9.5px] uppercase tracking-[0.12em]',
+          'rounded-[8px] border px-2 py-1.5 font-mono text-[9.5px] uppercase tracking-[0.12em]',
           plan.chargeable
             ? 'border-success/30 bg-success/[0.07] text-success'
             : 'border-warn/30 bg-warn/[0.07] text-warn',
@@ -159,7 +159,7 @@ function PlanCard({ plan, inUse, featured }: { plan: Plan; inUse: number; featur
                   onChange={(e) =>
                     setLimite(f.key, e.target.value === '' ? null : Number(e.target.value))
                   }
-                  className="w-24 rounded-[3px] border border-stroke/70 bg-void/50 px-2 py-1.5 text-right font-mono text-[11.5px] text-ink outline-none transition-colors placeholder:text-[10px] placeholder:text-ink-faint/60 focus:border-hud/60 tnum"
+                  className="w-24 rounded-[8px] border border-stroke/70 bg-void/50 px-2 py-1.5 text-right font-mono text-[11.5px] text-ink outline-none transition-colors placeholder:text-[10px] placeholder:text-ink-faint/60 focus:border-hud/60 tnum"
                 />
                 {f.suffix && <span className="font-mono text-[10px] text-ink-faint">{f.suffix}</span>}
               </span>
@@ -175,7 +175,7 @@ function PlanCard({ plan, inUse, featured }: { plan: Plan; inUse: number; featur
             <button
               key={f.key}
               onClick={() => setLimite(f.key, !on)}
-              className="flex items-center justify-between gap-3 rounded-[2px] px-1 py-1.5 transition-colors duration-150 hover:bg-hud/[0.05]"
+              className="flex items-center justify-between gap-3 rounded-[8px] px-1 py-1.5 transition-colors duration-150 hover:bg-hud/[0.05]"
               aria-pressed={on}
             >
               <span className={cn('text-[11.5px]', on ? 'text-ink-dim' : 'text-ink-faint/70')}>
@@ -225,7 +225,7 @@ export function Plans() {
       </p>
 
       {plans.length === 0 && (
-        <p className="rounded-[3px] border border-dashed border-hud/15 px-4 py-8 text-center text-[12px] text-ink-faint">
+        <p className="rounded-[8px] border border-dashed border-hud/15 px-4 py-8 text-center text-[12px] text-ink-faint">
           {loaded ? 'Nenhum plano cadastrado.' : 'Carregando os planos…'}
         </p>
       )}

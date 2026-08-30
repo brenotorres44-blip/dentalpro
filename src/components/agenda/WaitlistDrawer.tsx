@@ -76,7 +76,7 @@ export function WaitlistDrawer({ open, onClose }: { open: boolean; onClose: () =
                       }))
                     }
                     className={cn(
-                      'rounded-[3px] border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.1em] transition-all duration-200',
+                      'rounded-[8px] border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.1em] transition-all duration-200',
                       selected
                         ? 'border-hud/50 bg-hud/12 text-hud'
                         : 'border-stroke/60 text-ink-faint hover:border-hud/30',
@@ -117,7 +117,7 @@ export function WaitlistDrawer({ open, onClose }: { open: boolean; onClose: () =
                 type="date"
                 value={draft[key]}
                 onChange={(e) => setDraft((d) => ({ ...d, [key]: e.target.value }))}
-                className="w-full rounded-[3px] border border-stroke/70 bg-void/50 px-3 py-2.5 font-mono text-[12px] text-ink outline-none transition-colors focus:border-hud/60 tnum"
+                className="w-full rounded-[8px] border border-stroke/70 bg-void/50 px-3 py-2.5 font-mono text-[12px] text-ink outline-none transition-colors focus:border-hud/60 tnum"
               />
             </label>
           ))}
