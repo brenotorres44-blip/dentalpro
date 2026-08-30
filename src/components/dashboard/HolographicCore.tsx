@@ -269,7 +269,7 @@ export function HolographicCore({
             {Math.round(animatedOccupancy)}
             <span className="text-[15px] text-hud/70">%</span>
           </div>
-          <div className="tech-label mt-0.5">CAPACIDADE</div>
+          <div className="tech-label mt-0.5">Ocupação</div>
         </div>
       </motion.div>
 
@@ -281,12 +281,12 @@ export function HolographicCore({
         className="flex items-center gap-2 rounded-[3px] border border-hud/20 bg-hud/[0.05] px-3 py-1.5"
       >
         <StatusIndicator tone={dayState === 'today' ? 'live' : 'idle'} pulse={dayState === 'today'} />
-        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-hud">
+        <span className="text-[11px] font-medium text-hud">
           {dayState === 'today'
-            ? 'NÚCLEO OPERACIONAL ATIVO'
+            ? 'Dia em andamento'
             : dayState === 'past'
-              ? 'REGISTRO HISTÓRICO'
-              : 'PROJEÇÃO AGENDADA'}
+              ? 'Registro histórico'
+              : 'Dia agendado'}
         </span>
       </motion.div>
 

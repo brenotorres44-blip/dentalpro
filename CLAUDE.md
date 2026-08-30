@@ -7,10 +7,23 @@ em `supabase/migrations/`.
 **Este projeto nasceu como um recorte da arquitetura do BARBER FLOW** (um SaaS
 irmão para barbearias, com o mesmo motor de temas, a mesma matriz de
 permissões e o mesmo desenho de dois modos) — reaplicada a um domínio
-diferente e com um pedido explícito: layout limpo, sem o vocabulário visual de
-HUD do projeto de origem. O que mudou foi o domínio e a estética; o que ficou
+diferente e com um pedido explícito: layout limpo e profissional, sem o
+vocabulário visual de HUD/sci-fi do projeto de origem (sem cantoneiras, sem
+varredura, sem rótulo em mono caixa-alta, sem "núcleo operacional" nem
+telemetria decorativa). O que mudou foi o domínio e a estética; o que ficou
 foi a arquitetura: multi-tenant por `company_id`, dois modos de operação,
-permissão por capacidade e tokens de tema.
+permissão por capacidade e tokens de tema — o motor continua existindo, só o
+padrão de fábrica é sóbrio em vez de futurista.
+
+**O prontuário do paciente existia num protótipo anterior em HTML/JS puro**
+(mesmo repositório, história anterior a este recorte) e foi portado para cá:
+`/app/clients/:id` traz o **odontograma** (numeração FDI, 8 condições por
+dente, dentição permanente e decídua) e a **evolução clínica** (anotações por
+atendimento), como campos do próprio `ClientRecord` — ver
+`src/components/patient/Odontograma.tsx` e `src/pages/app/PatientDetail.tsx`.
+Os anexos (raio-x, documentos) e os documentos com assinatura digital daquele
+protótipo ainda não foram portados — dependem de storage e de um modelo de
+documento que este recorte não construiu.
 
 **O sistema tem dois modos, e o que decide é a existência de `.env.local`.**
 Com ele, os dados vêm do banco. Sem ele, tudo roda com sementes determinísticas

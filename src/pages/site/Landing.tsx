@@ -178,8 +178,8 @@ function Hero() {
         <Scan />
 
         <div className="mb-4 flex items-center justify-between">
-          <span className="tech-label">PAINEL DE CONTROLE · DEMONSTRAÇÃO</span>
-          <StatusIndicator tone="live" pulse label="AO VIVO" compact />
+          <span className="tech-label">Demonstração do painel</span>
+          <StatusIndicator tone="live" pulse label="Ao vivo" compact />
         </div>
 
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">

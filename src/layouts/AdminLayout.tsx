@@ -143,7 +143,7 @@ export function AdminLayout() {
         <div className="relative min-h-dvh">
           <BackgroundGrid />
           <ParticleField />
-          <BootOverlay label="SAAS CONTROL CENTER" sub="PLATAFORMA PRODENT" />
+          <BootOverlay label="Central da Plataforma" sub="Carregando..." />
 
           <Sidebar
             items={ADMIN_NAV}

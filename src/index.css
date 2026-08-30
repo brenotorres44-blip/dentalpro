@@ -226,9 +226,11 @@ option {
   background-size: 12px 12px;
 }
 
-/* Rótulo técnico: caixa alta, tracking largo, mono. */
+/* Rótulo de painel. PRODENT não tem tema de HUD — a família é sempre a do
+   corpo do texto, nunca mono; caixa e espaçamento continuam vindo do tema. */
 .tech-label {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
+  font-weight: 600;
   font-size: var(--tech-size, 0.625rem);
   letter-spacing: var(--tech-tracking);
   text-transform: var(--tech-case, uppercase);

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { Bell, LogOut, Menu, ShieldCheck, Wifi } from 'lucide-react';
+import { Bell, LogOut, Menu } from 'lucide-react';
 import { useClock } from '@/hooks/useClock';
 import { BootStage, useBoot } from '@/hooks/useBoot';
 import { StatusIndicator } from '@/components/ui/StatusIndicator';
@@ -49,28 +49,14 @@ export function TopBar({
         </button>
 
         <div className="min-w-0">
-          <h1 className="truncate font-display text-[15px] font-bold uppercase tracking-[0.28em] text-ink sm:text-[17px]">
+          <h1 className="truncate font-display text-[16px] font-semibold text-ink sm:text-[18px]">
             {title}
           </h1>
-          <div className="flex items-center gap-2">
-            <span className="h-px w-4 bg-hud/50" aria-hidden />
-            <span className="tech-label truncate">{subtitle}</span>
-          </div>
+          <div className="truncate text-[12px] text-ink-faint">{subtitle}</div>
         </div>
       </div>
 
       <div className="flex shrink-0 items-center gap-3 sm:gap-4">
-        <div className="hidden items-center gap-4 2xl:flex">
-          <span className="flex items-center gap-1.5">
-            <ShieldCheck size={13} className="text-success" />
-            <span className="tech-label text-success">SECURITY</span>
-          </span>
-          <span className="flex items-center gap-1.5">
-            <Wifi size={13} className="text-hud" />
-            <span className="tech-label text-hud">NETWORK</span>
-          </span>
-        </div>
-
         <button
           className="relative grid h-9 w-9 place-items-center rounded-[3px] border border-stroke/60 text-ink-dim transition-all duration-200 hover:border-hud/50 hover:text-hud"
           aria-label="Notificações — 2 não lidas"
@@ -82,17 +68,15 @@ export function TopBar({
         </button>
 
         <div className="hidden text-right sm:block">
-          <div className="font-mono text-[17px] font-medium leading-none tracking-[0.1em] text-hud text-glow tnum">
+          <div className="font-mono text-[15px] font-medium leading-none text-ink tnum">
             {time}
           </div>
-          <div className="tech-label mt-1 tnum">{date}</div>
+          <div className="mt-1 text-[11px] text-ink-faint tnum">{date}</div>
         </div>
 
-        <div className="flex items-center gap-2 rounded-[3px] border border-success/25 bg-success/[0.07] px-2.5 py-1.5">
+        <div className="hidden items-center gap-2 rounded-full border border-success/25 bg-success/[0.07] px-2.5 py-1.5 lg:flex">
           <StatusIndicator tone="ok" pulse />
-          <span className="hidden font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-success lg:inline">
-            Online
-          </span>
+          <span className="text-[11px] font-medium text-success">Online</span>
         </div>
 
         {/* --- usuário -------------------------------------------------- */}

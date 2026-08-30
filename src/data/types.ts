@@ -193,6 +193,42 @@ export interface ClientRecord {
   createdAt: string; // ISO
   preferredProfessionalId: string | null;
   active: boolean;
+  /** Convênio ou "Particular" — vazio não afirma nada, "Particular" é uma escolha. */
+  insurance?: string;
+  /** Texto livre — o cadastro não modela alergia como lista fechada. */
+  allergies?: string;
+  /** Prontuário: condição por dente, chave é o número FDI como string. */
+  odontogram?: Record<string, ToothState>;
+  /** Prontuário: anotações de evolução clínica, mais recente primeiro. */
+  evolution?: EvolutionNote[];
+}
+
+/* ==========================================================================
+   ODONTOGRAMA
+   ========================================================================= */
+
+export type ToothConditionId =
+  | 'normal'
+  | 'carie'
+  | 'restaurado'
+  | 'canal'
+  | 'protese'
+  | 'implante'
+  | 'extraido'
+  | 'ausente';
+
+export interface ToothState {
+  cond: ToothConditionId;
+  obs: string;
+}
+
+export interface EvolutionNote {
+  id: string;
+  /** ISO. */
+  at: string;
+  text: string;
+  /** Quem registrou — nome, não id: sobrevive à saída da pessoa da equipe. */
+  author: string;
 }
 
 /** Tudo aqui é derivado dos agendamentos — nunca digitado, nunca divergente. */

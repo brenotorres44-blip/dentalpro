@@ -2,14 +2,6 @@ import { AnimatePresence, motion } from 'motion/react';
 import { BootStage, useBoot } from '@/hooks/useBoot';
 import { useTheme } from '@/themes/ThemeProvider';
 
-const LOG = [
-  { at: BootStage.BACKGROUND, text: 'CORE' },
-  { at: BootStage.LINES, text: 'DATABASE' },
-  { at: BootStage.PANELS, text: 'SECURITY' },
-  { at: BootStage.CHARTS, text: 'USER PROFILE · TENANT' },
-  { at: BootStage.INDICATORS, text: 'THEME · SYSTEM ONLINE' },
-];
-
 /**
  * Cortina de inicialização.
  *
@@ -85,31 +77,10 @@ export function BootOverlay({ label, sub }: { label: string; sub: string }) {
             </svg>
 
             <div className="text-center">
-              <div className="font-display text-lg font-semibold tracking-[0.4em] text-ink">
+              <div className="font-display text-lg font-semibold tracking-wide text-ink">
                 {label}
               </div>
-              <div className="tech-label mt-1.5">{sub}</div>
-            </div>
-
-            {/* log de inicialização */}
-            <div className="flex h-16 w-64 flex-col items-center gap-1">
-              <AnimatePresence mode="popLayout">
-                {LOG.filter((l) => stage >= l.at)
-                  .slice(-3)
-                  .map((l) => (
-                    <motion.div
-                      key={l.text}
-                      layout
-                      initial={{ opacity: 0, y: 6 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="font-mono text-[10px] tracking-[0.2em] text-hud/60"
-                    >
-                      {l.text}
-                    </motion.div>
-                  ))}
-              </AnimatePresence>
+              <div className="mt-1.5 text-[12px] text-ink-faint">{sub}</div>
             </div>
           </div>
         </motion.div>

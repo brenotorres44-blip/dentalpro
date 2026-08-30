@@ -112,10 +112,10 @@ export function Dashboard() {
                 pulse={snapshot.dayState === 'today'}
                 label={
                   snapshot.dayState === 'today'
-                    ? 'TEMPO REAL'
+                    ? 'Hoje'
                     : snapshot.dayState === 'past'
-                      ? 'HISTÓRICO'
-                      : 'PREVISTO'
+                      ? 'Histórico'
+                      : 'Agendado'
                 }
                 compact
               />
@@ -263,16 +263,16 @@ export function Dashboard() {
           </Suspense>
         </HolographicPanel>
 
-        {/* ===== núcleo central ===== */}
+        {/* ===== visão do dia ===== */}
         <HolographicPanel
-          title="Núcleo operacional"
+          title="Visão do dia"
           icon={<Activity size={14} />}
           delay={120}
           scan
           stage={BootStage.CORE}
           className="order-3 md:col-span-1 xl:order-none xl:col-span-4"
           bodyClassName="p-4 flex-1"
-          actions={<StatusIndicator tone="live" pulse label="SYNC" compact />}
+          actions={<StatusIndicator tone="live" pulse label="Ao vivo" compact />}
         >
           <HolographicCore
             occupancy={snapshot.occupancyPct}

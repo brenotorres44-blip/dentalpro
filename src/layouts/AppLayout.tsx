@@ -55,13 +55,13 @@ export function AppLayout() {
         <div className="relative min-h-dvh">
           <BackgroundGrid />
           <ParticleField />
-          <BootOverlay label={company?.name ?? 'PRODENT'} sub="SISTEMA OPERACIONAL" />
+          <BootOverlay label={company?.name ?? 'PRODENT'} sub="Carregando o painel..." />
 
           <Sidebar
             items={APP_NAV}
-            brandMark={(company?.name ?? 'B')[0]}
+            brandMark={(company?.name ?? 'P')[0]}
             brandName={company?.name?.toUpperCase() ?? 'PRODENT'}
-            brandSub="SISTEMA OPERACIONAL"
+            brandSub="Gestão odontológica"
             version="v2.4.1"
             mobileOpen={menuOpen}
             onCloseMobile={() => setMenuOpen(false)}
@@ -72,7 +72,7 @@ export function AppLayout() {
             <SyncStatus />
             <TopBar
               title={company?.name ?? 'PRODENT'}
-              subtitle="PAINEL DE CONTROLE"
+              subtitle="Painel da clínica"
               onOpenMenu={() => setMenuOpen(true)}
             />
 

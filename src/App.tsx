@@ -28,6 +28,7 @@ import { PageSkeleton } from '@/components/ui/Skeleton';
 // agenda nem do financeiro.
 const Appointments = lazy(() => import('@/pages/app/Appointments').then((m) => ({ default: m.Appointments })));
 const Clients = lazy(() => import('@/pages/app/Clients').then((m) => ({ default: m.Clients })));
+const PatientDetail = lazy(() => import('@/pages/app/PatientDetail').then((m) => ({ default: m.PatientDetail })));
 const Services = lazy(() => import('@/pages/app/Services').then((m) => ({ default: m.Services })));
 const Professionals = lazy(() => import('@/pages/app/Professionals').then((m) => ({ default: m.Professionals })));
 const Financial = lazy(() => import('@/pages/app/Financial').then((m) => ({ default: m.Financial })));
@@ -149,6 +150,17 @@ export default function App() {
                 }
               />
             ))}
+
+            <Route
+              path="clients/:id"
+              element={
+                <RequireCapability capability="company.clients.view">
+                  <Suspense fallback={<Loading />}>
+                    <PatientDetail />
+                  </Suspense>
+                </RequireCapability>
+              }
+            />
 
             {/* Relatórios e assinatura: navegação pronta, tela ainda não —
                 ver `config/modules.ts`. */}

@@ -1,9 +1,11 @@
 import { useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   CalendarClock,
   CircleUserRound,
   Plus,
   Repeat,
+  Smile,
   Tag,
   Trash2,
   TrendingDown,
@@ -70,6 +72,7 @@ function daysSince(iso: string) {
 }
 
 export function Clients() {
+  const navigate = useNavigate();
   const operations = useOperations();
   const { clients, professionals } = operations;
 
@@ -289,6 +292,23 @@ export function Clients() {
         <span className="font-mono text-[12px] text-ink tnum">
           {formatBRL(insights.get(c.id)?.spentCents ?? 0)}
         </span>
+      ),
+    },
+    {
+      key: 'prontuario',
+      header: '',
+      align: 'right',
+      render: (c) => (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            navigate(`/app/clients/${c.id}`);
+          }}
+          className="inline-flex items-center gap-1.5 rounded-[6px] border border-stroke px-2.5 py-1.5 text-[11.5px] font-medium text-ink-dim transition-colors hover:border-hud/40 hover:text-hud"
+        >
+          <Smile size={13} /> Prontuário
+        </button>
       ),
     },
   ];
@@ -558,6 +578,21 @@ function ClientForm({
             value={draft.email}
             onChange={(e) => set('email', e.target.value)}
           />
+
+          <div className="grid grid-cols-2 gap-3">
+            <Field
+              label="CONVÊNIO"
+              value={draft.insurance ?? ''}
+              onChange={(e) => set('insurance', e.target.value)}
+              placeholder="Particular"
+            />
+            <Field
+              label="ALERGIAS"
+              value={draft.allergies ?? ''}
+              onChange={(e) => set('allergies', e.target.value)}
+              placeholder="Nenhuma conhecida"
+            />
+          </div>
 
           <SelectField
             label="PROFISSIONAL DE PREFERÊNCIA"

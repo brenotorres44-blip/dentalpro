@@ -138,14 +138,6 @@ export function Sidebar({
                         <span className="truncate text-[13px] font-medium md:hidden lg:inline">
                           {item.label}
                         </span>
-                        <span
-                          className={cn(
-                            'ml-auto font-mono text-[9px] tracking-widest transition-opacity duration-200 md:hidden lg:inline',
-                            isActive ? 'text-hud/70' : 'text-ink-faint/0 group-hover:text-ink-faint',
-                          )}
-                        >
-                          {item.code}
-                        </span>
                       </>
                     )}
                   </NavLink>
@@ -159,9 +151,9 @@ export function Sidebar({
           <div className="flex items-center justify-center gap-2 lg:justify-between">
             <span className="flex items-center gap-2">
               <StatusIndicator tone="live" pulse />
-              <span className="tech-label text-hud md:hidden lg:inline">ONLINE</span>
+              <span className="text-[11px] font-medium text-hud md:hidden lg:inline">Online</span>
             </span>
-            <span className="tech-label md:hidden lg:inline">{version}</span>
+            <span className="text-[11px] text-ink-faint md:hidden lg:inline">{version}</span>
           </div>
         </div>
       </aside>
